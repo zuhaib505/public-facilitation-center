@@ -86,25 +86,25 @@
                     <!-- nav-menu -->
                     <nav class="main-menu">
                         <ul>
-                            <li class="menu-item"><a href="index.html">Home</a></li>
-                            <li class="menu-item"><a href="about.html">About</a></li>
-                            <li class="menu-item"><a href="service.html">Services</a></li>
-                            <li class="menu-item"><a href="professionals.html">Professionals</a></li>
-                            <li class="menu-item"><a href="privacy.html">Privacy Policy</a></li>
-                            <li class="menu-item"><a href="terms.html">Terms & Conditions</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>home">Home</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>about">About</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>service">Services</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>professionals">Professionals</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>privacy">Privacy Policy</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>terms">Terms & Conditions</a></li>
                         </ul>
                     </nav>
                     <!-- nav pushed item -->
                     <div class="nav-pushed-item">
                         <div class="navbar-btn">
-                            <a href="contact.html" class="main-btn">Get A Quote</a>
+                            <a href="<?= $path ?>contact" class="main-btn">Get A Quote</a>
                         </div>
                     </div>
                 </div>
                 <!-- nav push item -->
                 <div class="nav-push-item">
                     <div class="navbar-btn">
-                        <a href="contact.html" class="main-btn">Contact Us</a>
+                        <a href="<?= $path ?>contact" class="main-btn">Contact Us</a>
                     </div>
                 </div>
                 <!-- Navbar Toggler -->

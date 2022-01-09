@@ -1,8 +1,5 @@
 <?php
 include_once("includes/conn.php");
-include_once('includes/baseFunctions.php');
-include_once('includes/siteFunctions.php');
-include_once('includes/functions.php');
 include_once("includes/confg.php");
 ?>
 <!DOCTYPE html>
@@ -52,13 +49,6 @@ include_once("includes/confg.php");
             <?php @include_once('inc_pages/shared/footer.php'); ?>
             <!--End Footer-->
 
-            <!-- Home Pugin Starts -->
-
-            <?php if ($_REQUEST['page'] == "" || $_REQUEST['page'] == "home" || $_REQUEST['page'] == "index" || $_REQUEST['page'] == "shop" || $_REQUEST['page'] == "product_detail") { ?>
-                <!-- Start Header -->
-                <?php @include_once('inc_pages/widgets/product-model.php'); ?>
-                <!-- End Header -->
-            <?php } ?>
 
         </div>
         <!-- Body main wrapper end -->

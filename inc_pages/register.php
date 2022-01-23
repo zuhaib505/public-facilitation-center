@@ -7,7 +7,7 @@
                             <h1>Register Yourself</h1>
                             <ul>
                                 <li><a href="#">Home</a></li>
-                                <li class="active">Reister</li>
+                                <li class="active">Register</li>
                             </ul>
                         </div>
                     </div>

@@ -4,10 +4,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="breadcrumbs-content text-center">
-                            <h1>Contact Us</h1>
+                            <h1>Register Yourself</h1>
                             <ul>
                                 <li><a href="#">Home</a></li>
-                                <li class="active">Contact Us</li>
+                                <li class="active">Reister</li>
                             </ul>
                         </div>
                     </div>

@@ -28,12 +28,12 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Enter Name" name="name" required>
+                                            <input type="text" class="form_control" placeholder="Enter Name" value="<?= $_POST['name'] ?>" name="name" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="email" class="form_control" placeholder="Enter Email" name="email" required>
+                                            <input type="email" class="form_control" placeholder="Enter Email" value="<?= $_POST['email'] ?>" name="email" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">  

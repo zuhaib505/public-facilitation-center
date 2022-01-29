@@ -24,26 +24,31 @@
                             <div class="section-title mb-40">
                                 <h3>Register Yourself</h3>
                             </div>
-                            <form class="contact-form card p-5">
+                            <form method="post" class="contact-form card p-5" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Enter Name" value="<?= $_POST['name'] ?>" name="name" required>
+                                            <input type="text" class="form_control" placeholder="Enter Name" value="<?= $_POST['cus_name'] ?>" name="cus_name" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="email" class="form_control" placeholder="Enter Email" value="<?= $_POST['email'] ?>" name="email" required>
+                                            <input type="email" class="form_control" placeholder="Enter Email" value="<?= $_POST['cus_email'] ?>" name="cus_email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form_group">
+                                            <input type="text" class="form_control" placeholder="Enter Contact Number" value="<?= $_POST['cus_contact'] ?>" name="cus_contact" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">  
                                         <div class="form-group">
-                                            <input style="height:46px;border-radius: 0px;" type="file" class="form-control" name="profile_image" id="profile_image" />
+                                            <input style="height:46px;border-radius: 0px;" type="file" class="form-control" name="cus_image" id="cus_image" />
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="password" class="form_control" placeholder="password" name="password" required>
+                                            <input type="password" class="form_control" placeholder="password" name="cus_password" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -53,7 +58,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_button">
-                                            <button class="main-btn">Submit</button>
+                                            <button name="submit" type="submit" class="submit main-btn">Submit</button>
                                         </div>
                                     </div>
                                 </div>

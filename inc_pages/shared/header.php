@@ -92,6 +92,8 @@
                             <li class="menu-item"><a href="<?= $path ?>professionals">Professionals</a></li>
                             <li class="menu-item"><a href="<?= $path ?>privacy">Privacy Policy</a></li>
                             <li class="menu-item"><a href="<?= $path ?>terms">Terms & Conditions</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>register">Register</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>login">Login</a></li>
                         </ul>
                     </nav>
                     <!-- nav pushed item -->

@@ -1,9 +1,12 @@
 <?php
 include_once("includes/conn.php");
 include_once("includes/confg.php");
+include_once('includes/baseFunctions.php');
+include_once('includes/siteFunctions.php');
+include_once('includes/functions.php');
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!--====== Required meta tags ======-->

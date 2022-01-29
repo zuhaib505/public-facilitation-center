@@ -1,5 +1,5 @@
 <?php session_start();
-error_reporting(1);
+error_reporting(E_ALL);
 
 if ($_SERVER['HTTP_HOST'] != 'localhost') {
     $hostname_dbconn = "localhost";
@@ -16,8 +16,6 @@ if ($_SERVER['HTTP_HOST'] != 'localhost') {
 
     $path = "http://localhost:121/public-facilitation-center/";
 }
-
-define('CURRENCY', '$');
 @include_once($path . 'vendor/autoload.php');
 
 define('PATH', $path);

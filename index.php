@@ -1,10 +1,12 @@
 <?php
 include_once("includes/conn.php");
-include_once("includes/confg.php");
 include_once('includes/baseFunctions.php');
 include_once('includes/siteFunctions.php');
 include_once('includes/functions.php');
-?>
+include_once("includes/confg.php");
+$banners = unserialize(str($banners['txt_data']));
+$header_sec = unserialize(str($header_sec['txt_data']));
+$intake_sec = unserialize(str($intake_sec['txt_data'])); ?>
 <!DOCTYPE html>
 <html lang="en">
 

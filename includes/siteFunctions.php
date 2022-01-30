@@ -700,22 +700,13 @@ function getAmbassadorByEmail($amb_email)
         return FALSE;
     }
 }
-function getJournal($journal_id)
+function getAmbassador($amb_id)
 {
-    if ($ex = getList("SELECT * FROM tbl_journals WHERE journal_id = '" . $journal_id . "' ")) {
+    if ($ex = getList("SELECT * FROM tbl_ambassadors WHERE amb_id = '" . $amb_id . "' ")) {
         $line = fetch_assoc($ex);
-        return $line;
+        return $line['amb_fullname'];
     } else {
-        return 'Journal Removed';
-    }
-}
-function getTopicBySlug($slug)
-{
-    if ($ex = getList("SELECT * FROM tbl_topics WHERE topic_slug = '" . $slug . "' ")) {
-        $line = fetch_assoc($ex);
-        return $line;
-    } else {
-        return 'Topic Removed';
+        return 'Ambassador Removed';
     }
 }
 function getTotalBalanceByAmbId($amb_id)
@@ -776,7 +767,7 @@ function generateAmbassadorCode()
 function findAmbassador($key)
 {
 
-    if ($ex = getList("SELECT * FROM tbl_ambassadors WHERE amb_code = '" . $key . "' OR amb_email = '" . $key . "' OR SUBSTRING(amb_contact, -10, 10) = '" . substr(str_replace(' ', '', $key), -10, 10) . "'")) {
+    if ($ex = getList("SELECT * FROM tbl_ambassadors WHERE amb_status=1 AND amb_code = '" . $key . "' OR amb_email = '" . $key . "' OR SUBSTRING(amb_contact, -10, 10) = '" . substr(str_replace(' ', '', $key), -10, 10) . "'")) {
         $line = fetch_assoc($ex);
         return $line;
     }
@@ -1299,6 +1290,17 @@ function getOrderPaymentStatus($status)
             return "<span class='text-danger'>Not Verified</span>";
     }
 }
+function getAmbExpStatus($status)
+{
+
+    if ($status == '1') {
+
+        return '<strong style="color:#35aa47;">Verified</strong>';
+    } else {
+
+        return '<strong style="color:#d84a38;">Under Training</strong>';
+    }
+}
 function getOrderDeliveryStatus($status)
 {
     switch ($status) {
@@ -1328,6 +1330,14 @@ function getProductByID($id)
     }
     return $output;
 }
+function getExpoByID($id)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_expo_schedules WHERE expo_id='$id' AND expo_status='1' ")) {
+        $output = fetch_assoc($ex);
+    }
+    return $output;
+}
 function getOrder($id)
 {
     $output = array();
@@ -1336,10 +1346,29 @@ function getOrder($id)
     }
     return $output;
 }
+function getBooking($id)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_expo_bookings WHERE booking_id='$id'")) {
+        $output = fetch_assoc($ex);
+    }
+    return $output;
+}
 function searchOrders($query)
 {
     $output = array();
     if ($ex = getList("SELECT * FROM tbl_orders WHERE order_email='$query' OR order_tracking_no='$query' ORDER BY order_date DESC")) {
+        while ($line = fetch_assoc($ex)) {
+            $output[] = $line;
+        }
+    }
+    return $output;
+}
+
+function searchBookings($query)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_expo_bookings WHERE booking_email='$query' OR booking_tracking_no='$query' ORDER BY booking_date DESC")) {
         while ($line = fetch_assoc($ex)) {
             $output[] = $line;
         }

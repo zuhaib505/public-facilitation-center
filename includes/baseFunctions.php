@@ -987,10 +987,10 @@ function filesize_formatted($path)
 function getCategorySlug($id)
 {
     global $conn;
-    $sql = "SELECT * FROM tbl_pro_cats WHERE cat_id ='" . $id . "' AND cat_status='1'";
+    $sql = "SELECT * FROM tbl_listings WHERE list_type='categories' AND list_id='" . $id . "' AND list_status='1'";
     $ex = $conn->query($sql);
-    $row = $ex->fetch_assoc();
-    return  stripslashes($row['cat_slug']);
+    $row = $ex->fetch_array();
+    return $row['list_slug'];
 }
 function getCategoryId($slug)
 {
@@ -1004,10 +1004,11 @@ function getCategoryId($slug)
 function getCategoryName($id)
 {
     global $conn;
-    $sql = "SELECT * FROM tbl_pro_cats WHERE cat_id ='" . $id . "' AND cat_status='1'";
+    $sql = "SELECT * FROM tbl_listings WHERE list_id='" . $id . "' AND list_type='categories'  AND list_status='1'";
     $ex = $conn->query($sql);
-    $row = $ex->fetch_assoc();
-    return  stripslashes($row['cat_title']);
+    while ($row = $ex->fetch_array()) {
+        return  stripslashes($row['list_title']);
+    }
 }
 
 function substrLenght($value, $min, $max, $inc)

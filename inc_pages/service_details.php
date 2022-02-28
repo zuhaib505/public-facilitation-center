@@ -42,6 +42,37 @@ $service = $exe1->fetch_assoc();
                             <h6><?= $service['service_short_desc'] ?></h6>
 
                         </div>
+                        <section class="service-area service-area-v2 pt-110">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="section-title text-center mb-60">
+                            <span class="span">Professionals</span>
+                            <h2>Our Best Professionals</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php $service_id = $service['service_id'];
+                        $prof_qry =  "SELECT * FROM tbl_professionals  WHERE prof_status='1' AND service_id=$service_id ORDER BY prof_order DESC";
+                        $prof_exe = $conn->query($prof_qry) or die(mysqli_error($conn));
+                        while ($prof = $prof_exe->fetch_array()) { ?>
+                    <div class="col-lg-6">
+                        <div class="service-item mb-50">
+                            <div class="icon">
+                                <i class="<?= $service['service_icon'] ?>"></i>
+                            </div>
+                            <div class="info">
+                                <h4><?= $prof['prof_name'] ?></h4>
+                                <p><?= $service['service_short_desc'] ?></p>
+                                <a href="<?= $path ?>professional/<?= $prof['prof_slug'] ?>" class="btn_link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </section>
                     </div>
                     <div class="col-lg-4">
                         <div class="sidebar-widget-area">

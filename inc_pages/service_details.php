@@ -1,13 +1,21 @@
-        <!--====== Start breadcrumbs-area Section ======-->
-        <section class="breadcrumbs-area bg_cover" style="background-image: url(assets/images/bg/breadcrumb-bg-1.jpg);">
+<?php
+$slug = $_REQUEST['slug'];
+$service_qry =  "SELECT * FROM tbl_services  WHERE service_status='1' AND service_slug='$slug' ORDER BY service_order DESC";
+$exe1 = $conn->query($service_qry) or die(mysqli_error($conn));
+$service = $exe1->fetch_assoc();
+?>
+
+<!--====== Start breadcrumbs-area Section ======-->
+        <section class="breadcrumbs-area bg_cover" style="background-image: url(<?= $path ?>assets/images/bg/breadcrumb-bg-1.jpg);">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="breadcrumbs-content text-center">
-                            <h1>Service-Single</h1>
+                            <h1><?= $service['service_title'] ?></h1>
                             <ul>
                                 <li><a href="#">Home</a></li>
-                                <li class="active">Service-Single</li>
+                                <li><a href="<?= $path ?>service">Service</a></li>
+                                <li class="active"><?= $service['service_title'] ?></li>
                             </ul>
                         </div>
                     </div>
@@ -22,16 +30,16 @@
                     <div class="col-lg-8">
                         <div class="service-details-wrapper">
                             <div class="title">
-                                <h3>Service Detail</h3>
+                                <h3><?= $service['service_title'] ?></h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur et adipisicing eiLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p><?= $service['service_short_desc'] ?></p>
                             <div class="content-box">
                                 <i class="flaticon-mechanic"></i>
                                 <h4>Get Facilitated</h4>
-                                <P>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur et adipisicing ei lorem ipsum dolor sit amet, incididuntnisi ut aliquip ex ea commodo consequat.</P>
+                                <P><?= $service['service_short_desc'] ?></P>
                             </div>
                             <img src="assets/images/service/single-service-1.jpg" class="img-fluid" alt="">
-                            <h6>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur et adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua.</h6>
+                            <h6><?= $service['service_short_desc'] ?></h6>
 
                         </div>
                     </div>
@@ -40,10 +48,11 @@
                             <div class="widget service-widget mb-40">
                                 <h4 class="title">All Service <span class="float-right"><i class="fas fa-angle-down"></i></span></h4>
                                 <ul class="list">
-                                    <li><a href="service-details.html">Education</a></li>
-                                    <li><a href="service-details.html">Car Repairing</a></li>
-                                    <li><a href="service-details.html">Bike Repairing</a></li>
-                                    <li><a href="service-details.html">Electricians</a></li>
+                                <?php $serviceqry =  "SELECT * FROM tbl_services  WHERE service_status='1' ORDER BY service_order DESC";
+                                $serviceexe = $conn->query($serviceqry) or die(mysqli_error($conn));
+                                while ($service1 = $serviceexe->fetch_array()) { ?>
+                                    <li><a href="<?= $path ?><?= $service1['service_slug'] ?>"><?= $service1['service_title'] ?></a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <div class="widget cta-widget">

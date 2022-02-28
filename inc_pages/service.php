@@ -27,54 +27,22 @@
                     </div>
                 </div>
                 <div class="row">
+                    <?php $service_qry =  "SELECT * FROM tbl_services  WHERE service_status='1' ORDER BY service_order DESC";
+                        $service_exe = $conn->query($service_qry) or die(mysqli_error($conn));
+                        while ($service = $service_exe->fetch_array()) { ?>
                     <div class="col-lg-4">
                         <div class="service-item mb-50">
                             <div class="icon">
-                                <i class="fas fa-book"></i>
+                                <i class="<?= $service['service_icon'] ?>"></i>
                             </div>
                             <div class="info">
-                                <h4>Education</h4>
-                                <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                                <a href="service-details.html" class="btn_link">Read More</a>
+                                <h4><?= $service['service_title'] ?></h4>
+                                <p><?= $service['service_short_desc'] ?></p>
+                                <a href="<?= $path ?>service/<?= $service['service_slug'] ?>" class="btn_link">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="service-item mb-50">
-                            <div class="icon">
-                                <i class="flaticon-car-service"></i>
-                            </div>
-                            <div class="info">
-                                <h4>Car Repairing</h4>
-                                <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                                <a href="service-details.html" class="btn_link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="flaticon-mechanic"></i>
-                            </div>
-                            <div class="info">
-                                <h4>Bike Repairing</h4>
-                                <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                                <a href="service-details.html" class="btn_link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="service-item mb-50">
-                            <div class="icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <div class="info">
-                                <h4>Electric Appliances Repairing</h4>
-                                <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                                <a href="service-details.html" class="btn_link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>

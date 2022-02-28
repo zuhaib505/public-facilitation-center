@@ -47,7 +47,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="brand-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-1.png" class="img-fluid" alt=""></a>
+                        <a href="<?= $path ?>"><img src="<?= $path ?>assets/images/logo/logo-1.png" class="img-fluid" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 header-box">
@@ -76,7 +76,7 @@
             <div class="nav-container d-flex align-items-center justify-content-between">
                 <!-- site logo -->
                 <div class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo/logo-1.png" class="img-fluid" alt=""></a>
+                    <a href="<?= $path ?>"><img src="<?= $path ?>assets/images/logo/logo-1.png" class="img-fluid" alt=""></a>
                 </div>
                 <div class="nav-menu">
                     <!-- Navbar Close Icon -->

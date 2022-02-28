@@ -5,7 +5,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4">
                             <div class="brand-logo">
-                                <a href="#"><img src="assets/images/logo/logo-2.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="<?= $path ?>assets/images/logo/logo-2.png" class="img-fluid" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -41,11 +41,11 @@
                             <div class="widget quick-link-widget">
                                 <h4 class="widget-title">Quick Links</h4>
                                 <ul class="widget-link">
-                                    <li><a href="#">Company History</a></li>
-                                    <li><a href="service.html">Latest Services</a></li>
-                                    <li><a href="professionals.html">Professionals</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contact.html">Conatct us</a></li>
+                                    <li><a href="<?= $path ?>about">Company History</a></li>
+                                    <li><a href="<?= $path ?>service">Latest Services</a></li>
+                                    <li><a href="<?= $path ?>professionals">Professionals</a></li>
+                                    <li><a href="<?= $path ?>about">About Us</a></li>
+                                    <li><a href="<?= $path ?>contact">Conatct us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -88,10 +88,10 @@
                         <div class="col-lg-6">
                             <div class="footer-nav">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">Company</a></li>
-                                    <li><a href="service.html">Services</a></li>
-                                    <li><a href="professionals.html">Professionals</a></li>
+                                    <li><a href="<?= $path ?>">Home</a></li>
+                                    <li><a href="<?= $path ?>about">Company</a></li>
+                                    <li><a href="<?= $path ?>service">Services</a></li>
+                                    <li><a href="<?= $path ?>professionals">Professionals</a></li>
                                 </ul>
                             </div>
                         </div>

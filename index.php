@@ -19,23 +19,23 @@ $intake_sec = unserialize(str($intake_sec['txt_data'])); ?>
     <!--====== Title ======-->
     <title>Public Facilitaion Services</title>
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
+    <link rel="shortcut icon" href="<?= $path ?>assets/images/favicon.ico" type="image/png">
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/css/bootstrap.min.css">
     <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/fonts/fontawesome/css/all.min.css">
     <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/fonts/flaticon/flaticon.css">
     <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/css/magnific-popup.css">
     <!--====== Slick css ======-->
-    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/css/slick.css">
     <!--====== Animate css ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/css/animate.css">
     <!--====== Default css ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/css/default.css">
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?= $path ?>assets/css/style.css">
 </head>
 
 <body>
@@ -61,27 +61,27 @@ $intake_sec = unserialize(str($intake_sec['txt_data'])); ?>
         <!--====== back-to-top ======-->
         <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
         <!--====== Jquery js ======-->
-        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-        <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="<?= $path ?>assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <script src="<?= $path ?>assets/js/vendor/jquery-1.12.4.min.js"></script>
         <!--====== Bootstrap js ======-->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
+        <script src="<?= $path ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?= $path ?>assets/js/popper.min.js"></script>
         <!--====== Slick js ======-->
-        <script src="assets/js/slick.min.js"></script>
+        <script src="<?= $path ?>assets/js/slick.min.js"></script>
         <!--====== Counterup js ======-->
-        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="<?= $path ?>assets/js/jquery.counterup.min.js"></script>
         <!--====== Waypoints js ======-->
-        <script src="assets/js/waypoints.min.js"></script>
+        <script src="<?= $path ?>assets/js/waypoints.min.js"></script>
         <!--====== Magnific Popup js ======-->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?= $path ?>assets/js/jquery.magnific-popup.min.js"></script>
         <!--====== Isotope js ======-->
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="<?= $path ?>assets/js/isotope.pkgd.min.js"></script>
         <!--====== Imagesloaded js ======-->
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="<?= $path ?>assets/js/imagesloaded.pkgd.min.js"></script>
         <!--====== WoW js ======-->
-        <script src="assets/js/wow.min.js"></script>
+        <script src="<?= $path ?>assets/js/wow.min.js"></script>
         <!--====== Main js ======-->
-        <script src="assets/js/main.js"></script>
+        <script src="<?= $path ?>assets/js/main.js"></script>
     </body>
 
 </html>

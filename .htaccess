@@ -9,7 +9,7 @@ ErrorDocument 404 /404
 RewriteRule ^([^./\\"'?#]+)$ index.php?page=$1 [L,QSA]	
 RewriteRule ^/?(news)/([^./\\"'?#]+)$  index.php?page=news_detail&slug=$2 [L,QSA]
 RewriteRule ^/?(new-arrivals)/([^./\\"'?#]+)$  index.php?page=new-arrivals&slug=$2 [L,QSA]
-RewriteRule ^/?(product-detail)/([^./\\"'?#]+)$  index.php?page=product_detail&slug=$2 [L,QSA]
+RewriteRule ^/?(service)/([^./\\"'?#]+)$  index.php?page=service_details&slug=$2 [L,QSA]
 RewriteRule ^/?(participant)/([^./\\"'?#]+)$  index.php?page=participant_detail&slug=$2 [L,QSA]
 RewriteRule ^/?(ambassador)/([^./\\"'?#]+)$  index.php?page=ambassador_detail&slug=$2 [L,QSA]
 RewriteRule ^/?(event)/([^./\\"'?#]+)$  index.php?page=event_detail&slug=$2 [L,QSA]

@@ -6,8 +6,8 @@ This Document will help you to get knowledge about public facilitaion services ,
 * [About Public Facilitation Services](#about-public-facilitation-services)
 * [Scope And Purpose Of The Website](#scope-and-Purpose-Of-the-website)
 * [Getting Started Project Cloning](#getting-started-project-cloning)
-  - [Xammp Installation](#standalone-execution)
-  - [Laravel Framework](#execution-using-apache-spark)
+  - [Xammp Installation](#xammp-installation)
+  - [Laravel Framework](#laravel-framework)
   - [Database Creation](#database-creation)
 * [Contribution Guidelines](#contribution-guidelines)
 

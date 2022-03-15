@@ -1,0 +1,30 @@
+[02-Oct-2021 11:25:51 Asia/Karachi] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::insert_id() in /home/madeinpaktourism/public_html/beta/portal/codes/products.php:46
+Stack trace:
+#0 /home/madeinpaktourism/public_html/beta/portal/includes/confg.php(13): include_once()
+#1 /home/madeinpaktourism/public_html/beta/portal/index.php(7): include_once('/home/madeinpak...')
+#2 {main}
+  thrown in /home/madeinpaktourism/public_html/beta/portal/codes/products.php on line 46
+[02-Oct-2021 11:38:41 Asia/Karachi] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::insert_id() in /home/madeinpaktourism/public_html/beta/portal/codes/products.php:46
+Stack trace:
+#0 /home/madeinpaktourism/public_html/beta/portal/includes/confg.php(13): include_once()
+#1 /home/madeinpaktourism/public_html/beta/portal/index.php(7): include_once('/home/madeinpak...')
+#2 {main}
+  thrown in /home/madeinpaktourism/public_html/beta/portal/codes/products.php on line 46
+[03-Oct-2021 19:53:24 Asia/Karachi] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::insert_id() in /home/madeinpaktourism/public_html/beta/portal/codes/products.php:49
+Stack trace:
+#0 /home/madeinpaktourism/public_html/beta/portal/includes/confg.php(13): include_once()
+#1 /home/madeinpaktourism/public_html/beta/portal/index.php(7): include_once('/home/madeinpak...')
+#2 {main}
+  thrown in /home/madeinpaktourism/public_html/beta/portal/codes/products.php on line 49
+[03-Oct-2021 19:55:14 Asia/Karachi] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::insert_id() in /home/madeinpaktourism/public_html/beta/portal/codes/products.php:49
+Stack trace:
+#0 /home/madeinpaktourism/public_html/beta/portal/includes/confg.php(13): include_once()
+#1 /home/madeinpaktourism/public_html/beta/portal/index.php(7): include_once('/home/madeinpak...')
+#2 {main}
+  thrown in /home/madeinpaktourism/public_html/beta/portal/codes/products.php on line 49
+[03-Oct-2021 19:58:40 Asia/Karachi] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::insert_id() in /home/madeinpaktourism/public_html/beta/portal/codes/products.php:49
+Stack trace:
+#0 /home/madeinpaktourism/public_html/beta/portal/includes/confg.php(13): include_once()
+#1 /home/madeinpaktourism/public_html/beta/portal/index.php(7): include_once('/home/madeinpak...')
+#2 {main}
+  thrown in /home/madeinpaktourism/public_html/beta/portal/codes/products.php on line 49

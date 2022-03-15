@@ -1165,6 +1165,30 @@ function getCategorybyId($id)
         echo $row['list_title'];
     }
 }
+function getUserById($id)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_users WHERE `user_id`='$id' AND user_status='1' ")) {
+        $output = fetch_assoc($ex);
+    }
+    return $output;
+}
+function getServiceByServiceId($id)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_services WHERE `service_id`='$id' AND service_status='1' ")) {
+        $output = fetch_assoc($ex);
+    }
+    return $output;
+}
+function getServicesByUserId($id)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_user_services WHERE `user_id`='$id' AND us_status='1' ")) {
+        $output = fetch_assoc($ex);
+    }
+    return $output;
+}
 function getProductCategorybySlug($slug)
 {
     global $conn;

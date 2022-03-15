@@ -1,0 +1,181 @@
+/* Custom CSS */
+
+
+/* here you can put your own css to customize and override the theme */
+
+div.pagination {
+    padding: 3px;
+    margin: 3px;
+    text-align: center;
+}
+
+div.pagination a {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #367fa9;
+    text-decoration: none;
+    /* no underline */
+    color: #367fa9;
+    text-transform: lowercase;
+}
+
+div.pagination a:hover,
+div.digg a:active {
+    border: 1px solid #ffffff;
+    text-transform: lowercase;
+    color: #367fa9;
+}
+
+div.pagination span.current {
+    padding: 2px 7px 2px 7px;
+    margin: 2px;
+    border: 1px solid #367fa9;
+    font-weight: bold;
+    background-color: #367fa9;
+    color: #FFF;
+}
+
+div.pagination span.disabled {
+    padding: 4px 7px 3px 7px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    color: #999;
+    text-transform: lowercase;
+}
+
+@media (min-width:768px) {}
+
+@media (max-width:991px) {}
+
+@media print {}
+
+.img_file {
+    height: 70px;
+    border: 1px solid #f7f7f7;
+    width: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* New */
+
+.custom-control-label:hover {
+    cursor: pointer;
+}
+
+.tbl_img {
+    max-height: 58px;
+    max-width: 100px;
+    border: 1px solid #c7c7c7;
+    border-style: dashed !important;
+}
+
+.list_active {
+    display: block;
+    background-color: #3e4694;
+    padding: 1rem 1.25rem;
+    border: 1px solid #E2E8EE;
+}
+
+.list-group li {
+    padding: 0px !important;
+}
+
+.list-group li a {
+    padding: 0.75rem 1.25rem !important;
+}
+
+.list-group li:first-child {
+    border-radius: 10px 10px 0px 0px !important;
+}
+
+.list-group li:last-child {
+    border-radius: 0px 0px 10px 10px !important;
+}
+
+.list_active a {
+    color: white;
+    text-decoration: none;
+}
+
+.list_hover {
+    display: block;
+    color: rgba(147, 159, 173, 0.84);
+    text-decoration: none;
+}
+
+.list-group-item:hover {
+    background-color: #3e4694;
+}
+
+.list-group-item:hover {
+    background-color: #3e4694;
+}
+
+.list-group-item:hover .list_hover {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#readmore {
+    color: #7dc668;
+}
+
+#tec_list {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: rgba(147, 159, 173, 0.84);
+    line-height: 0.9375rem;
+    font-weight: bold;
+}
+
+.translate {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+
+/*.mdk-header-layout,*/
+
+
+/*.mdk-drawer-layout,*/
+
+
+/*.mdk-drawer-layout__content {*/
+
+
+/*    height: 100%;*/
+
+
+/*}*/
+
+
+/*@media (min-width: 768px) {*/
+
+
+/*    .layout-login {*/
+
+
+/*        display: flex;*/
+
+
+/*        height: 100% !important;*/
+
+
+/*    }*/
+
+
+/*}*/
+
+.sidebar-left {
+    margin-top: 50px;
+}
+
+.form-control {
+    min-width: 40px;
+}

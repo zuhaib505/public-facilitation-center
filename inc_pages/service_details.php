@@ -82,7 +82,7 @@ $service = $exe1->fetch_assoc();
                                 <?php $serviceqry =  "SELECT * FROM tbl_services  WHERE service_status='1' ORDER BY service_order DESC";
                                 $serviceexe = $conn->query($serviceqry) or die(mysqli_error($conn));
                                 while ($service1 = $serviceexe->fetch_array()) { ?>
-                                    <li><a href="<?= $path ?><?= $service1['service_slug'] ?>"><?= $service1['service_title'] ?></a></li>
+                                    <li><a href="<?= $path ?>service/<?= $service1['service_slug'] ?>"><?= $service1['service_title'] ?></a></li>
                                     <?php } ?>
                                 </ul>
                             </div>

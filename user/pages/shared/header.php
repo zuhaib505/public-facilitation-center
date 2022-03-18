@@ -10,7 +10,7 @@ if ($_REQUEST['page'] != 'login') {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- Navbar Brand -->
-                    <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" height="60px" alt="Public Facilitaion Center"></a>
+                    <a href="<?= $path ?>"><img src="<?= $path ?>assets/images/logo/logo-1.png" height="50px" alt="Public Facilitaion Center"></a>
 
                     <ul class="nav navbar-nav ml-auto d-none d-md-flex">
 

@@ -7,6 +7,10 @@ if(isset($_POST['submit'])){
         $status=false;
         $_SESSION['successMsg'] = "Password Does Not Match!";
     }
+    if ($ex = getList(" SELECT * FROM tbl_customers WHERE cus_email='" . trim($vals['cus_email']) . "' ")) {
+        $status = false;
+        $_SESSION['errorMsg'] = "Email already taken by a member.";
+    }
     unset($vals['c_password']);
     $vals['cus_status'] = 1;
     global $conn;

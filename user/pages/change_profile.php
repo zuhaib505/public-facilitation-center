@@ -10,7 +10,7 @@ if (isset($_REQUEST['formOne']) && $_REQUEST['formOne'] == 'posted') {
         if ($ex = getList("SELECT * FROM tbl_users WHERE user_id='" . $id . "' ")) {
 
             if (!empty($vals['user_name'] || $vals['user_email'] || $vals['user_username'] || $vals['user_location'] || $vals['user_city'])) {
-                if ($img_rs = uploadImage($_FILES["user_profile_image"], "../uploads/members/", 720)) {
+                if ($img_rs = uploadImage($_FILES["user_profile_image"], "../uploads/users/", 720)) {
                     $vals['user_profile_image'] = $img_rs;
                 }
 

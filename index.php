@@ -82,6 +82,8 @@ $intake_sec = unserialize(str($intake_sec['txt_data'])); ?>
         <script src="<?= $path ?>assets/js/wow.min.js"></script>
         <!--====== Main js ======-->
         <script src="<?= $path ?>assets/js/main.js"></script>
+        <!-- Form validation -->
+        <script src="<?= $path ?>assets/js/form-validation.js"></script>
     </body>
 
 </html>

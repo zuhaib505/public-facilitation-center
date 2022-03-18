@@ -24,7 +24,8 @@
                             <div class="section-title mb-40">
                                 <h3>Login To Get Access To Your Account</h3>
                             </div>
-                            <form class="contact-form card p-5">
+                            <?= showValidMsg(); ?>
+                            <form action="" method="POST" class="contact-form card p-5">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">
@@ -38,7 +39,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_button">
-                                            <button class="main-btn">Login</button>
+                                            <button name="submit" type="submit" class="main-btn">Login</button>
                                         </div>
                                     </div>
                                 </div>

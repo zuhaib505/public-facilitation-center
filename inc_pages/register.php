@@ -24,21 +24,22 @@
                             <div class="section-title mb-40">
                                 <h3>Register Yourself</h3>
                             </div>
+                            <?= showValidMsg(); ?>
                             <form method="post" class="contact-form card p-5" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Enter Name" value="<?= $_POST['cus_name'] ?>" name="cus_name" required>
+                                            <input type="text" class="form_control alpha" placeholder="Enter Name" value="<?= $_POST['cus_name'] ?>" name="cus_name" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="email" class="form_control" placeholder="Enter Email" value="<?= $_POST['cus_email'] ?>" name="cus_email" required>
+                                            <input type="email" class="form_control alphanumeric" placeholder="Enter Email" value="<?= $_POST['cus_email'] ?>" name="cus_email" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Enter Contact Number" value="<?= $_POST['cus_contact'] ?>" name="cus_contact" required>
+                                            <input type="text" class="form_control numeric" placeholder="Enter Contact Number" value="<?= $_POST['cus_contact'] ?>" name="cus_contact" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">  

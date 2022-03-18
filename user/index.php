@@ -5,6 +5,10 @@ include_once('../includes/baseFunctions.php');
 include_once('../includes/siteFunctions.php');
 include_once('../apanel/includes/adminFunctions.php');
 include_once("includes/confg.php");
+if ($_SESSION["user_id"] < 1) {
+
+    redirectTo("login");
+}
 ?>
 
 <!DOCTYPE html>

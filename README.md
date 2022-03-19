@@ -8,7 +8,9 @@ This Document will help you to get knowledge about public facilitaion services ,
 * [Getting Started Project Cloning](#getting-started-project-cloning)
   - [Xammp Installation](#xammp-installation)
   - [Laravel Framework](#laravel-framework)
+  - [Clone Repositry](#clonning-repositry)
   - [Database Creation](#database-creation)
+  - [Database Connection](#database-connection)
 * [Contribution Guidelines](#contribution-guidelines)
 
 ## About Public Facilitation Services
@@ -28,13 +30,13 @@ We often get frustrated while taking the appointment of service provider because
 
 ### Xammp Installation
 Follow These Instructions To Install Xammp.
-* Step 1: Download. ... ( https://www.apachefriends.org/download.html )
-* Step 2: Run .exe file. ...
-* Step 3: Deactivate any antivirus software. ...
-* Step 4: Deactivate UAC. ...
-* Step 5: Start the setup wizard. ...
-* Step 6: Choose software components. ...
-* Step 7: Choose the installation directory. ...
+* Step 1: Download. ( https://www.apachefriends.org/download.html )
+* Step 2: Run .exe file.
+* Step 3: Deactivate any antivirus software.
+* Step 4: Deactivate UAC.
+* Step 5: Start the setup wizard.
+* Step 6: Choose software components.
+* Step 7: Choose the installation directory.
 * Step 8: Start the installation process.
 
 
@@ -44,6 +46,13 @@ Follow These Instructions To Install Laravel.
 * php artisan serve
 For Laravel 8 your PHP vesion should be greater than 7.3 ,If your PHP version is less than 7.4 than update your Xammp.
 
+### Clonning Repositry
+Follow These Instructions.
+* Clone The repostry to xammp/htdocs folder.
+* Default route is http://localhost:121/public-facilitation-center/
+* you can change the post 121 to any other port which you are using currently.
+
+
 ### Database Creation
 Follow These Instructions
 * Open the php myadmin (database)
@@ -52,6 +61,11 @@ Follow These Instructions
 * now click on go button to import database tables
 * database has been created successfully
 
+### Database Connection
+Follow These Instructions.
+* In The includes folder there is a conn.php file.
+* The project localhost port is 121 if you are using any other localhost port change it accordingly.
+* In The includes folder there is a conn.php file.
 
 <a name="p27582-10"></a>
 

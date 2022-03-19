@@ -55,9 +55,9 @@ Follow These Instructions.
 
 ### Database Creation
 Follow These Instructions
-* Open the php myadmin (database)
+* Open the phpmyadmin (database) http://localhost:121/phpmyadmin/index.php
 * create a database with name : public
-* click on import , In the project there is a folder named db , all the database files are there pic the with latest date
+* click on import , In the project there is a folder named db , all the database files are there pick the with latest date
 * now click on go button to import database tables
 * database has been created successfully
 
@@ -65,7 +65,9 @@ Follow These Instructions
 Follow These Instructions.
 * In The includes folder there is a conn.php file.
 * The project localhost port is 121 if you are using any other localhost port change it accordingly.
-* In The includes folder there is a conn.php file.
+* If you change the port then change the port in url also.
+* The veriable $path contains site base url if you change the port then chane the port in variable also.
+* Default username is root and password is empty if you are using some login credentials for your localhost then change the username and password in conn.php file.
 
 <a name="p27582-10"></a>
 

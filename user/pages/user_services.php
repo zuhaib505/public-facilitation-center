@@ -80,8 +80,8 @@
                                             <th style="width: 3%;" class="text-center">#ID</th>
                                             <th style="width: 15%;">Image</th>
                                             <th>Title</th>
-                                            <th>Pakage</th>
-                                            <th>Extra Charges</th>
+                                            <th>Pakage ( PKR )</th>
+                                            <th>Extra Charges ( PKR )</th>
                                             <th style="width: 8%;" class="text-center">Edit</th>
                                             <th style="width: 8%;" class="text-center">Delete</th>
                                         </tr>

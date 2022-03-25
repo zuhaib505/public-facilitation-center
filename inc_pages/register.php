@@ -29,27 +29,27 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="text" class="form_control alpha" placeholder="Enter Name" value="<?= $_POST['cus_name'] ?>" name="cus_name" required>
+                                            <input type="text" class="form_control alpha" placeholder="Enter Name" value="<?= $_POST['user_name'] ?>" name="user_name" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="email" class="form_control alphanumeric" placeholder="Enter Email" value="<?= $_POST['cus_email'] ?>" name="cus_email" required>
+                                            <input type="email" class="form_control alphanumeric" placeholder="Enter Email" value="<?= $_POST['user_email'] ?>" name="user_email" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="text" class="form_control numeric" placeholder="Enter Contact Number" value="<?= $_POST['cus_contact'] ?>" name="cus_contact" required>
+                                            <input type="text" class="form_control numeric" placeholder="Enter Contact Number" value="<?= $_POST['user_contact'] ?>" name="user_contact" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">  
                                         <div class="form-group">
-                                            <input style="height:46px;border-radius: 0px;" type="file" class="form-control" name="cus_image" id="cus_image" />
+                                            <input style="height:46px;border-radius: 0px;" type="file" class="form-control" name="user_profile_image" id="user_profile_image" />
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <input type="password" class="form_control" placeholder="password" name="cus_password" required>
+                                            <input type="password" class="form_control" placeholder="password" name="user_password" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">

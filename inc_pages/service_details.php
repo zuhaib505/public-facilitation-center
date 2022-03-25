@@ -24,7 +24,7 @@ $service = $exe1->fetch_assoc();
         </section>
         <!--====== End breadcrumbs-area Section ======-->
         <!--====== Start service-details-section Section ======-->
-        <section class="service-details-section pt-120 pb-120">
+        <section class="service-details-section pt-60 pb-60">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">

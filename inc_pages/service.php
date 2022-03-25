@@ -16,7 +16,7 @@
         </section>
         <!--====== End breadcrumbs-area Section ======-->
         <!--====== Start service-area Section ======-->
-        <section class="service-area service-area-v2 pt-110">
+        <section class="service-area service-area-v2 pt-50">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">

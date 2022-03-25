@@ -1416,6 +1416,7 @@ button {
   .service-area-v1 .service-item {
     background: #fff;
     margin-left: 15px;
+    min-height: 445px;
     margin-right: 15px; }
     .service-area-v1 .service-item .info p {
       margin-bottom: 15px; }
@@ -1434,18 +1435,19 @@ button {
         color: #43baff; }
 
 .service-area-v2 {
-  padding-bottom: 180px; }
+  padding-bottom: 30px; }
   @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .service-area-v2 {
-      padding-bottom: 120px; } }
+      padding-bottom: 20px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .service-area-v2 {
-      padding-bottom: 120px; } }
+      padding-bottom: 20px; } }
   @media (max-width: 767px) {
     .service-area-v2 {
-      padding-bottom: 120px; } }
+      padding-bottom: 20px; } }
   .service-area-v2 .service-item {
     background: #23203e;
+    min-height: 445px;
     text-align: center;
     padding: 55px 40px 48px;
     border-radius: 5px;

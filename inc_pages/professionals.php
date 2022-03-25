@@ -4,10 +4,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="breadcrumbs-content text-center">
-                            <h1>Service</h1>
+                            <h1>Professionals</h1>
                             <ul>
                                 <li><a href="#">Home</a></li>
-                                <li class="active">Service</li>
+                                <li class="active">Professionals</li>
                             </ul>
                         </div>
                     </div>
@@ -16,13 +16,13 @@
         </section>
         <!--====== End breadcrumbs-area Section ======-->
         <!--====== Start service-area Section ======-->
-        <section class="service-area service-area-v2 pt-110">
+        <section class="service-area service-area-v2 pt-50">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="section-title text-center mb-60">
-                            <span class="span">Service</span>
-                            <h2>Our Best Service</h2>
+                            <span class="span">Professionals</span>
+                            <h2>Our Best Professionals</h2>
                         </div>
                     </div>
                 </div>

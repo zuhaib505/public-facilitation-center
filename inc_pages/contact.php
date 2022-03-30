@@ -24,7 +24,7 @@
                             <div class="section-title mb-40">
                                 <h3>Discussig With Us</h3>
                             </div>
-                            <form class="contact-form">
+                            <form action="#" method="post" data-url="<?= $path . 'send-contact-message' ?>" data-type="contact" class="contact-form contact">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form_group">
@@ -54,7 +54,6 @@
                                     <div class="col-lg-12">
                                         <div class="form_button">
                                             <button class="main-btn">Submit</button>
-                                            <button class="main-btn reset-btn">Reset</button>
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +68,7 @@
                                 </div>
                                 <div class="info">
                                     <h5>Our Office Location</h5>
-                                    <p>420 Love Sreet 133/2 Mirpur Dhaka</p>
+                                    <p><?= $site_address ?></p>
                                 </div>
                             </div>
                             <div class="box">
@@ -78,7 +77,7 @@
                                 </div>
                                 <div class="info">
                                     <h5>Our Contact Number</h5>
-                                    <p><a href="tel:+06617800628">+(066) 517 800 628</a></p>
+                                    <p><a href="tel:03001234567"><?= $site_phone ?></a></p>
                                 </div>
                             </div>
                             <div class="box">
@@ -87,19 +86,29 @@
                                 </div>
                                 <div class="info">
                                     <h5>Our Contact E-mail</h5>
-                                    <p><a href="mailto:info.contact@gmail.com"> info.contact@gmail.com</a></p>
+                                    <p><a href="mailto:zuhaibhassan381@gmail.com"> <?= $site_email ?></a></p>
                                 </div>
                             </div>
                             <div class="box">
                                 <div class="social-box">
-                                    <ul>
-                                        <li><span>Follow Us:</span></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-skype"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
+                                <ul>
+                                <li><span>Follow Us:</span></li>
+                                <?php if ($site_facebook) { ?>
+                                    <li><a target="_blank" href="<?php echo $site_facebook ?>"><i class="fab fa-facebook-f"></i></a></li>
+                                <?php } ?>
+                                <?php if ($site_twitter) { ?>
+                                    <li><a target="_blank" href="<?php echo $site_twitter ?>"><i class="fab fa-twitter"></i></a></li>
+                                <?php } ?>
+                                <?php if ($site_instagram) { ?>
+                                    <li><a target="_blank" href="<?php echo $site_instagram ?>"><i class="fab fa-instagram"></i></a></li>
+                                <?php } ?>
+                                <?php if ($site_skype) { ?>
+                                    <li><a target="_blank" href="skype:<?php echo $site_skype ?>?call"><i class="fab fa-skype"></i></a></li>
+                                <?php } ?>
+                                <?php if ($site_youtube) { ?>
+                                    <li><a target="_blank" href="<?php echo $site_youtube ?>"><i class="fab fa-youtube"></i></a></li>
+                                <?php } ?>
+                            </ul>
                                 </div>
                             </div>
                         </div>

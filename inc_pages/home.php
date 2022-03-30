@@ -1,3 +1,6 @@
+<?php
+$bannerrs = getTable('tbl_texts', " `txt_type` = 'header' ");
+$banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
     <!--====== Start banner-area Section ======-->
     <section class="banner-area bg_cover" style="background-image: url(assets/images/bg/hero-bg-1.jpg);">
         <div class="container">
@@ -8,8 +11,8 @@
                         <h1 class="wow fadeInUp" data-wow-delay=".2s">Keep Yourself Tension Free</h1>
                         <h3 class="wow fadeInUp" data-wow-delay=".3s">Lorem ipsum dolor amet, consecte Lorem ipsum dolor sit<br>amet consectetur adipisicing eiusmod tempor</h3>
                         <ul class="wow fadeInUp" data-wow-delay=".4s">
-                            <li><a href="service.html" class="main-btn">Service</a></li>
-                            <li><a href="professionals.html" class="main-btn">Professionals</a></li>
+                            <li><a href="<?= $path ?><?= $banner['link1'] ?>" class="main-btn"><?= $banner['text1'] ?></a></li>
+                            <li><a href="<?= $path ?><?= $banner['link2'] ?>" class="main-btn"><?= $banner['text2'] ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -251,27 +254,31 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="call-back-form">
-                        <form>
-                            <h3>Request A Call Back</h3>
-                            <p>consectetur adipisicing tempor incididunt adipisicing.</p>
-                            <div class="form_group">
-                                <label>Your Name</label>
-                                <input type="text" class="form_control" name="name">
-                            </div>
-                            <div class="form_group">
-                                <label>Phone Number</label>
-                                <input type="text" class="form_control" name="phone">
-                            </div>
-                            <div class="form_group">
-                                <label>Choose Service</label>
-                                <input type="text" class="form_control" name="service">
-                            </div>
-                            <div class="form_group">
-                                <button class="main-btn">Send Request</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="call-back-form">
+                    <form action="#" method="post" data-url="<?= $path . 'send-quote' ?>" data-type="contact" class="contact-form contact">
+                        <h3>Request A Call Back</h3>
+                        <p>If You Need Any Help YoU Can Contact US...</p>
+                        <div class="form_group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter Name" class="form_control alpha" name="name">
+                        </div>
+                        <div class="form_group">
+                            <label>Phone Number</label>
+                            <input type="text" placeholder="Phone Number" class="form_control numeric" name="phone">
+                        </div>
+                        <div class="form_group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter Email Address" class="form_control alphanumeric" name="email">
+                        </div>
+                        <div class="form_group form_button">
+                            <button type="submit" id="contact-submit" class="main-btn submit">
+                                <img id="btn-loader" style="height: 25px;display:none;" src="<?= $path ?>assets/images/illustrations/btn-loader.svg" alt="Please wait...">
+                                <span class="submit-text">Submit <i class="fa fa-chevron-right fa-icon"></i></span>
+                            </button>
+                            <!-- <button class="main-btn reset-btn">Reset</button> -->
+                        </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </div>

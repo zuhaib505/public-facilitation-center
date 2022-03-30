@@ -29,8 +29,8 @@
                     <div class="header-left">
                         <ul>
                             <li class="text"><span>Monday-Saturday 9 AM - 6 PM </span></li>
-                            <li class="info"><span><a href="tel:+923035051247"><i class="fas fa-phone-alt"></i>+92 303 5051247</a></span></li>
-                            <li class="info"><span><a href="mailto:zuhaibhassan381@gmail.com"><i class="far fa-envelope"></i>publicfaciliation@info.com</a></span></li>
+                            <li class="info"><span><a href="tel:+923035051247"><i class="fas fa-phone-alt"></i><?= $site_phone ?></a></span></li>
+                            <li class="info"><span><a href="mailto:zuhaibhassan381@gmail.com"><i class="far fa-envelope"></i><?= $site_email ?></a></span></li>
                         </ul>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="brand-logo">
-                        <a href="<?= $path ?>"><img src="<?= $path ?>assets/images/logo/logo-1.png" class="img-fluid" alt=""></a>
+                        <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" class="img-fluid" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 header-box">
@@ -76,7 +76,7 @@
             <div class="nav-container d-flex align-items-center justify-content-between">
                 <!-- site logo -->
                 <div class="brand-logo">
-                    <a href="<?= $path ?>"><img src="<?= $path ?>assets/images/logo/logo-1.png" class="img-fluid" alt=""></a>
+                    <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" class="img-fluid" alt=""></a>
                 </div>
                 <div class="nav-menu">
                     <!-- Navbar Close Icon -->
@@ -90,8 +90,8 @@
                             <li class="menu-item"><a href="<?= $path ?>about">About</a></li>
                             <li class="menu-item"><a href="<?= $path ?>service">Services</a></li>
                             <li class="menu-item"><a href="<?= $path ?>professionals">Professionals</a></li>
-                            <li class="menu-item"><a href="<?= $path ?>privacy">Privacy Policy</a></li>
-                            <li class="menu-item"><a href="<?= $path ?>terms">Terms & Conditions</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>privacy-policy">Privacy Policy</a></li>
+                            <li class="menu-item"><a href="<?= $path ?>terms-conditions">Terms & Conditions</a></li>
                             <li class="menu-item"><a href="<?= $path ?>register">Register</a></li>
                             <li class="menu-item"><a href="<?= $path ?>login">Login</a></li>
                         </ul>

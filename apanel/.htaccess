@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks
+	RewriteEngine On
+
+#	RewriteRule ^(.*)\.htm$ index.php?page=$1.htm [L,QSA]
+	RewriteRule ^([^./\\"'?#]+)$ index.php?page=$1 [L,QSA]	
+	RewriteRule ^/?(settings)$  index.php?main=settings&page=home [L,QSA]
+	RewriteRule ^/?(settings)/$  index.php?main=settings&page=home [L,QSA]
+	RewriteRule ^/?(settings)/([^./\\"'?#]+)$  index.php?main=settings&page=$2 [L,QSA]
+</IfModule>

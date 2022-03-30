@@ -14,7 +14,7 @@ if ($_SERVER['HTTP_HOST'] != 'localhost') {
     $username_dbconn = "root";
     $password_dbconn = "";
 
-    $path = "http://localhost/public-facilitation-center/";
+    $path = "http://localhost:121/public-facilitation-center/";
 }
 
 define('CURRENCY', '$');

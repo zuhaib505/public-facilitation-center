@@ -1,3 +1,9 @@
+        <?php
+                $footerrs = getTable('tbl_texts', " `txt_type` = 'footer' ");
+                $footer = unserialize(stripslashes($footerrs['txt_data']));
+                $newsrs = getTable('tbl_texts', " `txt_type` = 'newsletter' ");
+                $news = unserialize(stripslashes($newsrs['txt_data']));
+                ?>
         <!--====== Start Footer ======-->
         <footer class="footer-area">
             <div class="footer-top pt-40 pb-40">
@@ -11,11 +17,25 @@
                         <div class="col-lg-8">
                             <div class="social-box">
                                 <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <?php if ($site_facebook) { ?>
+                            <li><a target="_blank" href="<?= $site_facebook ?>"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <?php } ?>
+                            <?php if ($site_twitter) { ?>
+                            <li><a target="_blank" href="<?= $site_twitter ?>"><i class="fab fa-twitter"></i></a></li>
+                            <?php } ?>
+                            <?php if ($site_instagram) { ?>
+                            <li><a target="_blank" href="<?= $site_instagram ?>"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <?php } ?>
+                            <?php if ($site_skype) { ?>
+                            <li><a target="_blank" href="skype:<?= $site_skype ?>?call"><i class="fab fa-skype"></i></a>
+                            </li>
+                            <?php } ?>
+                            <?php if ($site_pinterest) { ?>
+                            <li><a target="_blank" href="<?= $site_pinterest ?>"><i class="fab fa-pinterest-p"></i></a>
+                            </li>
+                            <?php } ?>
                                 </ul>
                             </div>
                         </div>
@@ -29,11 +49,11 @@
                             <div class="widget contact-info-widget">
                                 <h4 class="widget-title">Conatct Us</h4>
                                 <div class="info-box mb-20">
-                                    <p><i class="fas fa-phone-alt"></i><a href="tel:+923035051247">+92 303 5051247</a></p>
+                                    <p><i class="fas fa-phone-alt"></i><a href="tel:+923035051247"><?= $site_phone ?></a></p>
                                 </div>
                                 <div class="info-box">
                                     <h5 class="mb-20">Office Address</h5>
-                                    <p><i class="fas fa-map-marker-alt"></i>Pakstan , Sargodha</p>
+                                    <p><i class="fas fa-map-marker-alt"></i><?= $site_address ?></p>
                                 </div>
                             </div>
                         </div>
@@ -64,16 +84,17 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="widget newsletters-widget">
-                                <h4 class="widget-title">Join Newsletters</h4>
-                                <p>Bed perspiciatis unde omnis iste natus error voluptatem accusantium</p>
-                                <form class="newsletters-form">
-                                    <div class="form_group">
-                                        <input type="text" class="form_control" placeholder="Enter Your Email" name="email" required>
-                                        <button class="icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                          <h4 class="widget-title"><?= $news['title'] ?></h4>
+                          <?= $news['detail']  ?>
+                          <form action="#" method="post" data-url="<?= $path . 'send-newsletter' ?>" data-type="newsletter" class="newsletters-form contact-form newsletter">
+                              <div class="form_group">
+                                  <input type="email" class="form_control" placeholder="Enter Your Email" name="email" required>
+                                  <button type="submit" class="icon submit"><img id="btn-loader" style="height: 25px;display:none;" src="<?= $path ?>assets/images/illustrations/btn-loader.svg" alt="Please wait...">
+                                      <span class="submit-text"><i class="fas fa-long-arrow-alt-right"></i></span></button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
                     </div>
                 </div>
             </div>
@@ -82,7 +103,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="copyright-text">
-                                <p>@copy 2020 <span>PFS</span>. All Right Reserved</p>
+                                <p><?= $footer['text_copyright'] ?></p>
                             </div>
                         </div>
                         <div class="col-lg-6">

@@ -36,54 +36,69 @@ $intake_sec = unserialize(str($intake_sec['txt_data'])); ?>
     <link rel="stylesheet" href="<?= $path ?>assets/css/default.css">
     <!--====== Style css ======-->
     <link rel="stylesheet" href="<?= $path ?>assets/css/style.css">
+    
+    <!--====== Bootstrap js ======-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="<?= $path ?>assets/js/bootstrap.min.js?v=<?= $site_version ?>"></script>
+    <script>
+    window.grecaptcha = null;
+    </script>
+    <script>
+    const BASE_URL = "<?= $path ?>";
+    </script>
 </head>
 
 <body>
+    <!-- Body main wrapper start -->
+    <div class="body-wrapper">
+        <!-- Start Header -->
+        <?php @include_once('inc_pages/shared/header.php'); ?>
+        <!-- End Header -->
+        <!-- Start Include File -->
+        <?php @include_once($includefile); ?>
+        <!--End Include File-->
 
-    <body>
-        <!-- Body main wrapper start -->
-        <div class="body-wrapper">
-            <!-- Start Header -->
-            <?php @include_once('inc_pages/shared/header.php'); ?>
-            <!-- End Header -->
-            <!-- Start Include File -->
-            <?php @include_once($includefile); ?>
-            <!--End Include File-->
-
-            <!--Start Footer-->
-            <?php @include_once('inc_pages/shared/footer.php'); ?>
-            <!--End Footer-->
+        <!--Start Footer-->
+        <?php @include_once('inc_pages/shared/footer.php'); ?>
+        <!--End Footer-->
 
 
-        </div>
-        <!-- Body main wrapper end -->
+    </div>
+    <!-- Body main wrapper end -->
 
-        <!--====== back-to-top ======-->
-        <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
-        <!--====== Jquery js ======-->
-        <script src="<?= $path ?>assets/js/vendor/modernizr-3.6.0.min.js"></script>
-        <script src="<?= $path ?>assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <!--====== Bootstrap js ======-->
-        <script src="<?= $path ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?= $path ?>assets/js/popper.min.js"></script>
-        <!--====== Slick js ======-->
-        <script src="<?= $path ?>assets/js/slick.min.js"></script>
-        <!--====== Counterup js ======-->
-        <script src="<?= $path ?>assets/js/jquery.counterup.min.js"></script>
-        <!--====== Waypoints js ======-->
-        <script src="<?= $path ?>assets/js/waypoints.min.js"></script>
-        <!--====== Magnific Popup js ======-->
-        <script src="<?= $path ?>assets/js/jquery.magnific-popup.min.js"></script>
-        <!--====== Isotope js ======-->
-        <script src="<?= $path ?>assets/js/isotope.pkgd.min.js"></script>
-        <!--====== Imagesloaded js ======-->
-        <script src="<?= $path ?>assets/js/imagesloaded.pkgd.min.js"></script>
-        <!--====== WoW js ======-->
-        <script src="<?= $path ?>assets/js/wow.min.js"></script>
-        <!--====== Main js ======-->
-        <script src="<?= $path ?>assets/js/main.js"></script>
-        <!-- Form validation -->
-        <script src="<?= $path ?>assets/js/form-validation.js"></script>
-    </body>
+    <!--====== back-to-top ======-->
+    <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+
+    <!-- SweetAlert 2 -->
+    <script src="<?= $path ?>assets/js/sweetalert2.all.min.js?v=<?= $site_version ?>"></script>
+    <!--====== Jquery js ======-->
+    <script src="<?= $path ?>assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="<?= $path ?>assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="<?= $path ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?= $path ?>assets/js/popper.min.js"></script>
+    <!--====== Slick js ======-->
+    <script src="<?= $path ?>assets/js/slick.min.js"></script>
+    <!--====== Counterup js ======-->
+    <script src="<?= $path ?>assets/js/jquery.counterup.min.js"></script>
+    <!--====== Waypoints js ======-->
+    <script src="<?= $path ?>assets/js/waypoints.min.js"></script>
+    <!--====== Magnific Popup js ======-->
+    <script src="<?= $path ?>assets/js/jquery.magnific-popup.min.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="<?= $path ?>assets/js/isotope.pkgd.min.js"></script>
+    <!--====== Imagesloaded js ======-->
+    <script src="<?= $path ?>assets/js/imagesloaded.pkgd.min.js"></script>
+    <!--====== WoW js ======-->
+    <script src="<?= $path ?>assets/js/wow.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="<?= $path ?>assets/js/main.js"></script>
+    <!-- Form submit -->
+    <script src="<?= $path ?>assets/js/form-submit.js"></script>
+    <!--====== Contact js ======-->
+    <script src="<?= $path ?>assets/js/contact.js"></script>
+    <!-- Form validation -->
+    <script src="<?= $path ?>assets/js/form-validation.js"></script>
+</body>
 
 </html>

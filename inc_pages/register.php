@@ -25,7 +25,7 @@
                                 <h3>Register Yourself</h3>
                             </div>
                             <?= showValidMsg(); ?>
-                            <form method="post" class="contact-form card p-5" enctype="multipart/form-data">
+                            <form method="post" class="contact-form1 card p-5" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">
@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_button">
-                                            <button name="submit" type="submit" class="submit main-btn">Submit</button>
+                                            <button name="submit" type="submit" class="main-btn">Submit</button>
                                         </div>
                                     </div>
                                 </div>

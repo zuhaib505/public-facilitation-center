@@ -5,6 +5,7 @@ if (isset($_REQUEST['formOne']) && $_REQUEST['formOne'] == 'posted') {
     unset($_POST['formOne']);
     $vals = $_POST;
     unset($vals['submit']);
+    $status=true;
     if ($_SESSION['user_id']) {
         $id = $_SESSION['user_id'];
         if ($ex = getList("SELECT * FROM tbl_users WHERE user_id='" . $id . "' ")) {
@@ -13,16 +14,17 @@ if (isset($_REQUEST['formOne']) && $_REQUEST['formOne'] == 'posted') {
                 if ($img_rs = uploadImage($_FILES["user_profile_image"], "../uploads/users/", 720)) {
                     $vals['user_profile_image'] = $img_rs;
                 }
-
+                if($status){
                 updateRecord("tbl_users", $vals, " `user_id` = '" . $id . "' ");
-
                 $_SESSION['successMsg'] = 'Profile has been updated successfully !';
-            } else {
 
+                }
+            } else {
+                $status=false;
                 $_SESSION['errorMsg'] = 'Please Fill All The Field In The Form !';
             }
         } else {
-
+            $status=false;
             $_SESSION['errorMsg'] = 'No User Found, try again !';
         }
     }

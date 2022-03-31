@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['formOne'])) {
     $vals = $_POST;
-
+    $status=true;
     unset($vals['formOne']);
 
     if ($img_rs = uploadImage($_FILES["site_logo"], "../uploads/logo/", 197)) {
@@ -11,11 +11,12 @@ if (isset($_POST['formOne'])) {
     if ($img_rs = uploadImage($_FILES["login_image"], "../uploads/banners/", 1310)) {
         $vals['login_image'] = $img_rs;
     }
-
+    if($status){
     $new_vals['site_info_data'] = serialize($vals);
     updateRecord("tbl_siteadmin", $new_vals, " `site_id`= '1' ");
 
-    $_SESSION['successMsg'] = 'Changing has been updated successfully !';
+    $_SESSION['successMsg'] = 'Changes has been updated successfully !';
+    }
 }
 
 $rs = getField("tbl_siteadmin", " `site_id`= '1' ", "site_info_data");

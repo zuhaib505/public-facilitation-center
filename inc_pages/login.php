@@ -25,7 +25,7 @@
                                 <h3>Login To Get Access To Your Account</h3>
                             </div>
                             <?= showValidMsg(); ?>
-                            <form action="" method="POST" class="contact-form card p-5">
+                            <form action="" method="POST" class="contact-form1 card p-5">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form_group">

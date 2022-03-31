@@ -120,7 +120,7 @@
         <!--====== Start contact-map-section Section ======-->
         <section class="contact-map-section">
             <div class="map-box">
-                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=dhaka&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108208.92464783472!2d72.6269928!3d32.0549408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39217439502694e3%3A0x55e1bad6edcbbc70!2sSargodha%2C%20Punjab!5e0!3m2!1sen!2s!4v1648722097940!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <!--====== End contact-map-section Section ======-->

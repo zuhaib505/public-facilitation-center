@@ -28,7 +28,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Enter Name" name="name" required>
+                                            <input type="text" class="form_control alpha" placeholder="Enter Name" name="name" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -38,12 +38,12 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Subject" name="subject" required>
+                                            <input type="text" class="form_control alpha" placeholder="Subject" name="subject" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Phone" name="phone" required>
+                                            <input type="text" class="form_control numeric" placeholder="Phone" name="phone" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">

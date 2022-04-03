@@ -16,7 +16,6 @@ if (isset($_POST['submit1'])) {
         $r1_max_orderid = $q1_max_orderid->fetch_array();
         $vals[$this_prefix . 'order'] = intval($r1_max_orderid["orderid"]) + 1;
         $vals['user_username'] = toSlugUrl($vals['user_name']);
-        $vals['user_id'] = $_SESSION['user_id'];
         if ($img_rs = uploadImage($_FILES[$this_prefix . "profile_image"], "../uploads/users/", 720)) {
             $vals[$this_prefix . 'profile_image'] = $img_rs;
         }

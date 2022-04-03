@@ -43,7 +43,7 @@ $service = $exe1->fetch_assoc();
 
                         </div>
                         <section class="service-area service-area-v2 pt-110">
-            <!-- <div class="container">
+            <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="section-title text-center mb-60">
@@ -71,7 +71,7 @@ $service = $exe1->fetch_assoc();
                     </div>
                     <?php } ?>
                 </div>
-            </div> -->
+            </div>
         </section>
                     </div>
                     <div class="col-lg-4">
@@ -86,7 +86,7 @@ $service = $exe1->fetch_assoc();
                                     <?php } ?>
                                 </ul>
                             </div>
-                            <!-- <div class="widget cta-widget">
+                            <div class="widget cta-widget">
                                 <h3>Request For Call</h3>
                                 <form>
                                     <div class="form_group">
@@ -101,7 +101,7 @@ $service = $exe1->fetch_assoc();
                                         <button class="main-btn">Send Request</button>
                                     </div>
                                 </form>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

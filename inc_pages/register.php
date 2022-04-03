@@ -27,6 +27,24 @@
                             <?= showValidMsg(); ?>
                             <form method="post" class="contact-form1 card p-5" enctype="multipart/form-data">
                                 <div class="row">
+                                <div class="col-lg-12">
+                                        <div class="form_group">
+                                            <label for="user">Please Select A Service</label>
+                                            <select style="height: 50px; border-radius: 0px; margin-bottom: 28px;" name="service_id" id="service_id" class="form-control">
+                                        <?php
+                                            $service_qry =  "SELECT * FROM tbl_services  WHERE service_status='1' ORDER BY service_order ASC";
+                                            $service_exe = $conn->query($service_qry) or die(mysqli_error($conn));
+                                            while ($service = $service_exe->fetch_array()) {
+                                                $service_id = $service['service_id'];
+                                            ?>
+                                        <option value="<?= $service_id ?>"
+                                            <?= ($data['service_id'] == $service['service_id'] ? 'selected="selected"' : ''); ?>>
+                                            <?= $service['service_title'] ?>
+                                        </option>
+                                        <?php } ?>
+                                    </select>
+                                        </div>
+                                    </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
                                             <input type="text" class="form_control alpha" placeholder="Enter Name" value="<?= $_POST['user_name'] ?>" name="user_name" required>
@@ -42,6 +60,7 @@
                                             <input type="text" class="form_control numeric" placeholder="Enter Contact Number" value="<?= $_POST['user_contact'] ?>" name="user_contact" required>
                                         </div>
                                     </div>
+                                    
                                     <div class="col-lg-12">  
                                         <div class="form-group">
                                             <input style="height:46px;border-radius: 0px;" type="file" class="form-control" name="user_profile_image" id="user_profile_image" />

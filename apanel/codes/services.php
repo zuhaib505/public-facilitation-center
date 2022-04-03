@@ -16,6 +16,7 @@ if (isset($_POST['submit1'])) {
         $r1_max_orderid = $q1_max_orderid->fetch_array();
         $vals[$this_prefix . 'order'] = intval($r1_max_orderid["orderid"]) + 1;
         $vals['service_slug'] = toSlugUrl($vals['service_title']);
+        if($vals['service_title'] != ''){
         if ($_POST['terms']) {
             unset($vals['terms']);
             saveRecord($this_table, $vals);
@@ -23,6 +24,9 @@ if (isset($_POST['submit1'])) {
         } else {
             $_SESSION['errorMsg'] = "Please Agree To The Terms And Conditions!";
         }
+    }else{
+        $_SESSION['errorMsg'] = "Please Add Service Title!";
+    }
     } else if ($_REQUEST['mode'] == 'update') {
         if ($vals['service_slug'] == trim($vals['service_slug']) && strpos($vals['service_slug'], ' ') !== false) {
             $vals['service_slug'] = toSlugUrl($vals['service_title']);

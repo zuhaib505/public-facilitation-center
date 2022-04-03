@@ -77,8 +77,8 @@
                                     <p>8:00 AM - 9:00 PM</p>
                                 </div>
                                 <div class="info-box">
-                                    <p>Monday - Friday</p>
-                                    <p>8:00 AM - 9:00 PM</p>
+                                    <p>Saturday - Sunday</p>
+                                    <p>10:00 AM - 4:00 PM</p>
                                 </div>
                             </div>
                         </div>

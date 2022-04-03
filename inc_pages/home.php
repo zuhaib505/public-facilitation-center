@@ -71,6 +71,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
             </div>
         </div>
     </section>
+
     <!--====== End features-area Section ======-->
     <!--====== Start service-area Section ======-->
     <section class="service-area service-area-v1 bg_cover pt-110 pb-110" style="background-image: url(assets/images/bg/service-bg-1.jpg);">
@@ -84,52 +85,26 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                 </div>
                 <div class="col-lg-6">
                     <div class="button-box mb-60">
-                        <a href="service.html" class="main-btn">See All</a>
+                        <a href="<?= $path ?>service" class="main-btn">See All</a>
                     </div>
                 </div>
             </div>
             <div class="row service-slide">
+            <?php $service_qry =  "SELECT * FROM tbl_services  WHERE service_status='1' ORDER BY service_order DESC";
+                        $service_exe = $conn->query($service_qry) or die(mysqli_error($conn));
+                        while ($service = $service_exe->fetch_array()) { ?>
                 <div class="col-lg-4 service-item mb-50">
                     <div class="icon">
-                        <i class="fas fa-book"></i>
+                        <i class="<?= $service['service_icon'] ?>"></i>
                     </div>
                     <div class="info">
-                        <h4>Education</h4>
-                        <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                        <a href="service-details.html" class="btn_link">Read More</a>
+                        <h4><?= $service['service_title'] ?></h4>
+                        <p><?= $service['service_short_desc'] ?></p>
+                        <a href="<?= $path ?>service/<?= $service['service_slug'] ?>" class="btn_link">Read More</a>
                     </div>
                 </div>
-                <div class="col-lg-4 service-item mb-50">
-                    <div class="icon">
-                        <i class="flaticon-car-service"></i>
-                    </div>
-                    <div class="info">
-                        <h4>Car Repairing</h4>
-                        <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                        <a href="service-details.html" class="btn_link">Read More</a>
-                    </div>
+                    <?php } ?>
                 </div>
-                <div class="col-lg-4 service-item">
-                    <div class="icon">
-                        <i class="flaticon-mechanic"></i>
-                    </div>
-                    <div class="info">
-                        <h4>Bike Repairing</h4>
-                        <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                        <a href="service-details.html" class="btn_link">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 service-item mb-50">
-                    <div class="icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="info">
-                        <h4>Electric Appliances Repairing</h4>
-                        <p>consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</p>
-                        <a href="service-details.html" class="btn_link">Read More</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!--====== End service-area Section ======-->

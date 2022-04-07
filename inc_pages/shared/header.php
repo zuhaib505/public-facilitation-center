@@ -55,7 +55,7 @@
                         <div class="col-lg-6">
                             <div class="box">
                                 <i class="flaticon-trophy"></i>
-                                <h5>The Best Indastrial</h5>
+                                <h5>The Best Industrial</h5>
                                 <p>Solution Provider</p>
                             </div>
                         </div>

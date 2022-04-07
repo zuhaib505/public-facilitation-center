@@ -292,17 +292,10 @@ function uploadImage($image, $path, $img_width = 1024)
         $filename = $image['name'];
         $ext = getExtension($filename);
         $ext = strtolower($ext);
-        if ($ext == 'jpg' || 'jpeg' ||  $ext == 'JPG' || $ext == 'png' || $ext == 'ico' || $ext == 'gif' || $ext == 'PNG' || $ext == 'JPEG' || $ext == 'webp' || $ext == 'svg') {
-            //$imagename = str_replace(" ","_",strtolower($imagename));
+        if ($ext == 'jpg' || $ext == 'JPG' || $ext == 'png' || $ext == 'ico' || $ext == 'gif' || $ext == 'PNG' || $ext == 'JPEG' || $ext == 'JPEG' || $ext == 'webp') {
             $imagename = "image_" . $imagename . "." . $ext;
+
             if (move_uploaded_file($image["tmp_name"], $path . $imagename)) {
-
-                // include_once('SimpleImage.php');
-                // $obj_img = new SimpleImage();
-
-                // $obj_img->load($path . $imagename);
-                // $obj_img->resizeToWidth(intval($img_width));
-                // $obj_img->save($path . $imagename);
                 return $imagename;
             }
         } else {

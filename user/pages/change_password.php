@@ -1,7 +1,7 @@
-<?
+<?php
 if (isset($_REQUEST['formOne']) && $_REQUEST['formOne'] == 'posted') {
 
-    if ($_SESSION['user_id']) {
+    if ($_SESSION['user_id'] > 0) {
         $id = $_SESSION['user_id'];
         if ($ex = getList("SELECT * FROM tbl_users WHERE user_password='" . doEncode($_REQUEST['admin_opswd']) . "' ")) {
 
@@ -73,7 +73,7 @@ if (isset($_REQUEST['formOne']) && $_REQUEST['formOne'] == 'posted') {
                         </div>
                         <div class="text-center mb-3">
                             <hr>
-                            <a href="<?= $apath; ?>" class=" btn btn-default btn-lg"> <i class="fa fa-arrow-left"></i> Cancel</a> &nbsp;
+                            <a href="<?= $path; ?>user/" class=" btn btn-default btn-lg"> <i class="fa fa-arrow-left"></i> Cancel</a> &nbsp;
                             <button type="submit" class=" btn btn-primary btn-lg"> <i class="fa fa-save"></i> Update</button>
                         </div>
                     </div>

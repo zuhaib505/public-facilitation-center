@@ -21,11 +21,14 @@ if(isset($_POST['submit'])){
         $vals['user_order'] = intval($r1_max_orderid["orderid"]) + 1;
     if ($img_rs = uploadImage($_FILES["user_profile_image"], "uploads/users/", 720)) {
         $vals['user_profile_image'] = $img_rs;
+    }else{
+        $_SESSION['errorMsg'] = "Please Add A Valid Image";
+        $status=false;
     }
     if($status){
         saveRecord("tbl_users", $vals);
         $_SESSION['successMsg'] = "Your Account Has Been Created Successfully!";
+        unset($_POST);
     }
-    unset($_POST);
 }
 ?>

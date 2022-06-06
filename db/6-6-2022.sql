@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 05:50 AM
+-- Generation Time: Jun 06, 2022 at 06:11 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -161,15 +161,17 @@ CREATE TABLE `tbl_requests` (
   `req_order` int(11) NOT NULL,
   `req_sender_id` int(1) NOT NULL DEFAULT 0,
   `user_id` int(11) NOT NULL,
-  `us_id` int(11) NOT NULL
+  `us_id` int(11) NOT NULL,
+  `req_type` varchar(255) DEFAULT NULL,
+  `req_duration` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_requests`
 --
 
-INSERT INTO `tbl_requests` (`req_id`, `req_sender_name`, `req_sender_email`, `req_sender_phone`, `req_subject`, `req_message`, `req_status`, `req_accept`, `req_order`, `req_sender_id`, `user_id`, `us_id`) VALUES
-(4, 'Zuhaib Hassan', 'zuhaib@gmail.com', '03001234567', 'Request Gain', 'This is testing message.', 1, 1, 3, 0, 1, 1);
+INSERT INTO `tbl_requests` (`req_id`, `req_sender_name`, `req_sender_email`, `req_sender_phone`, `req_subject`, `req_message`, `req_status`, `req_accept`, `req_order`, `req_sender_id`, `user_id`, `us_id`, `req_type`, `req_duration`) VALUES
+(4, 'Zuhaib Hassan', 'zuhaib@gmail.com', '03001234567', 'Request Gain', 'This is testing message.', 1, 1, 3, 0, 1, 1, 'once', 'once');
 
 -- --------------------------------------------------------
 
@@ -324,7 +326,7 @@ INSERT INTO `tbl_user_services` (`us_id`, `us_slug`, `us_title`, `us_pkg`, `user
 (1, 'science-tution', 'Science Tution', '100', 1, '10', 'Science Teaching, Extra charges will be applied after every 5km travelling.', 'image_16473273379019.png', 1, 1),
 (5, 'home-tution', 'Home Tution', '100', 1, '10', 'Home Tution, Extra charges will be applied after every 5km travelling.', 'image_16473274767487.png', 1, 2),
 (8, 'engine-repairing', 'Engine Repairing', '100', 0, '10', '<p>Repair Engine, Extra Charges will be applied ofter ever 5km travelling.</p>', 'image_16544858819982.jpg', 1, 3),
-(9, 'engine-repairing', 'Engine Repairing', '100', 0, '10', '<p>Engine Repairing, Extra charges will be applied after every 5km travelling.</p>', 'image_16544859725889.jpg', 1, 4),
+(9, 'engine-repairing', 'Engine Repairing', '100', 4, '10', '<p>Engine Repairing, Extra charges will be applied after every 5km travelling.</p>', 'image_16544859725889.jpg', 1, 4),
 (10, 'electrical-mechanic', 'Electrical Mechanic', '100', 0, '10', '<p>Electrical Appliances Repairing, Extra charges will be applied after every 5km travelling.<br></p>', 'image_16544861832345.jpg', 1, 5),
 (11, 'science-tech', 'Science Tech', '100', 0, '10', '<p>Science Teaching, Extra charges will be applied after every 5km travelling.<br></p>', 'image_16544862617794.jpg', 1, 6),
 (12, 'science-tech', 'Science Tech', '100', 0, '10', '<p>Science Teaching, Extra charges will be applied after every 5km travelling.<br></p>', '', 1, 7),
@@ -444,7 +446,7 @@ ALTER TABLE `tbl_professionals`
 -- AUTO_INCREMENT for table `tbl_requests`
 --
 ALTER TABLE `tbl_requests`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_services`

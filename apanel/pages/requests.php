@@ -22,6 +22,8 @@
                                     <?= formText('Phone', 'req_sender_phone', $data['req_sender_phone']) ?>
                                     <?= formText('Subject', 'req_subject', $data['req_subject']) ?>
                                     <?= formTextArea('Message', 'req_message', $data['req_message'],3) ?>
+                                    <?= formText('Type', 'req_type', $data['req_type']) ?>
+                                    <?= formText('Duration', 'req_duration', $data['req_duration']) ?>
                                     <div class="form-group">
                                     <label for="field">Status</label>
                                     <select name="req_status" id="list_status" class="form-control">

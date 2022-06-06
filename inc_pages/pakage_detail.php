@@ -13,7 +13,18 @@ $user = $user_exe->fetch_assoc();
 // Service
 $service = getServiceByServiceId($user['service_id']);
 ?>
-
+<style>
+    #req_duration{
+    margin-bottom: 30px;
+    height: 55px;
+    border-radius: 0px;
+    }
+    #req_type{
+    margin-bottom: 30px;
+    height: 55px;
+    border-radius: 0px;
+    }
+</style>
 <!--====== Start breadcrumbs-area Section ======-->
 <section class="breadcrumbs-area bg_cover"
     style="background-image: url(<?= $path ?>assets/images/bg/breadcrumb-bg-1.jpg);">
@@ -53,48 +64,85 @@ $service = getServiceByServiceId($user['service_id']);
 
                 </div>
                 <div class="contact-wrapper">
-                            <div class="section-title mb-40">
-                                <h3>Send Service Request</h3>
-                            </div>
-                            <?= showValidMsg(); ?>
-                            <form action="<?= $path ?>service_request" method="post" class="book-form contact">
-                            <input type="hidden" name="user_id" value="<?= $us['user_id'] ?>" >
-                            <input type="hidden" name="us_id" value="<?= $us['us_id'] ?>" >
-                            <input type="hidden" name="us_slug" value="<?= $us['us_slug'] ?>" >
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form_group">
-                                            <input type="text" class="form_control alpha" placeholder="Enter Name" value="<?= $_POST['req_sender_name'] ?>" name="req_sender_name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form_group">
-                                            <input type="email" class="form_control" placeholder="Enter Email" value="<?= $_POST['req_sender_email'] ?>" name="req_sender_email" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form_group">
-                                            <input type="text" class="form_control alpha" placeholder="Subject" value="<?= $_POST['req_subject'] ?>" name="req_subject" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form_group">
-                                            <input type="text" class="form_control numeric" placeholder="Phone" value="<?= $_POST['req_sender_phone'] ?>" name="req_sender_phone" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form_group">
-                                            <textarea class="form_control" placeholder="Message" value="<?= $_POST['req_message'] ?>" name="req_message"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form_button">
-                                            <button class="main-btn">Send Service Request</button>
-                                        </div>
-                                    </div>
+                    <div class="section-title mb-40">
+                        <h3>Send Service Request</h3>
+                    </div>
+                    <?= showValidMsg(); ?>
+                    <form action="<?= $path ?>service_request" method="post" class="book-form contact">
+                        <input type="hidden" name="user_id" value="<?= $us['user_id'] ?>">
+                        <input type="hidden" name="us_id" value="<?= $us['us_id'] ?>">
+                        <input type="hidden" name="us_slug" value="<?= $us['us_slug'] ?>">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group select-group">
+                                    <span class="label">Request Type</span>
+                                    <select id="req_type" class="form-control" required name="req_type">
+                                        <option value="once"
+                                            <?= ($_POST['req_type'] == 'once' ? 'selected="selected"' : ''); ?>>
+                                            At The Spot Booking</option>
+                                        <option value="contract"
+                                            <?= ($_POST['req_type'] == 'contract' ? 'selected="selected"' : ''); ?>>Contract Booking
+                                        </option>
+                                    </select>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group select-group">
+                                    <span class="label">Booking Duration</span>
+                                    <select id="req_duration" class="form-control" required name="req_duration">
+                                        <option value="once"
+                                            <?= ($_POST['req_duration'] == 'once' ? 'selected="selected"' : ''); ?>>
+                                            At The Spot</option>
+                                        <option value="month"
+                                            <?= ($_POST['req_duration'] == 'month' ? 'selected="selected"' : ''); ?>>Month
+                                        </option>
+                                        <option value="half"
+                                            <?= ($_POST['req_duration'] == 'half' ? 'selected="selected"' : ''); ?>>half Year
+                                        </option>
+                                        <option value="year"
+                                            <?= ($_POST['req_duration'] == 'year' ? 'selected="selected"' : ''); ?>>Year
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form_group">
+                                    <input type="text" class="form_control alpha" placeholder="Enter Name"
+                                        value="<?= $_POST['req_sender_name'] ?>" name="req_sender_name" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form_group">
+                                    <input type="email" class="form_control" placeholder="Enter Email"
+                                        value="<?= $_POST['req_sender_email'] ?>" name="req_sender_email" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form_group">
+                                    <input type="text" class="form_control alpha" placeholder="Subject"
+                                        value="<?= $_POST['req_subject'] ?>" name="req_subject" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form_group">
+                                    <input type="text" class="form_control numeric" placeholder="Phone"
+                                        value="<?= $_POST['req_sender_phone'] ?>" name="req_sender_phone" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form_group">
+                                    <textarea class="form_control" placeholder="Message"
+                                        value="<?= $_POST['req_message'] ?>" name="req_message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form_button">
+                                    <button class="main-btn">Send Service Request</button>
+                                </div>
+                            </div>
                         </div>
+                    </form>
+                </div>
             </div>
             <div class="col-lg-4">
                 <div class="sidebar-widget-area">

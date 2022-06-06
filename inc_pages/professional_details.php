@@ -1,8 +1,8 @@
 <?php
-$slug = $_REQUEST['slug'];
-$service_qry =  "SELECT * FROM tbl_services  WHERE service_status='1' AND service_slug='$slug' ORDER BY service_order DESC";
+$slug = doDecode($_REQUEST['slug']);
+$service_qry =  "SELECT * FROM tbl_users  WHERE `user_id`=$slug AND user_status='1' ORDER BY user_order DESC";
 $exe1 = $conn->query($service_qry) or die(mysqli_error($conn));
-$service = $exe1->fetch_assoc();
+$user = $exe1->fetch_assoc();
 ?>
 
 <!--====== Start breadcrumbs-area Section ======-->
@@ -12,11 +12,11 @@ $service = $exe1->fetch_assoc();
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="breadcrumbs-content text-center">
-                    <h1><?= $service['service_title'] ?></h1>
+                    <h1><?= $user['service_title'] ?></h1>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="<?= $path ?>service">Service</a></li>
-                        <li class="active"><?= $service['service_title'] ?></li>
+                        <li><a href="<?= $path ?>Professionals">Professional</a></li>
+                        <li class="active"><?= $user['user_name'] ?></li>
                     </ul>
                 </div>
             </div>
@@ -31,16 +31,16 @@ $service = $exe1->fetch_assoc();
             <div class="col-lg-8">
                 <div class="service-details-wrapper">
                     <div class="title">
-                        <h3><?= $service['service_title'] ?></h3>
+                        <h3><?= $user['user_name'] ?></h3>
                     </div>
-                    <p><?= $service['service_short_desc'] ?></p>
+                    <p>PROFESSIONAL ID : <?= $_REQUEST['slug'] ?> / Contact no : <?= $user['user_contact'] ?></p>
                     <div class="content-box">
                         <i class="flaticon-mechanic"></i>
                         <h4>Get Facilitated</h4>
-                        <P><?= $service['service_short_desc'] ?></P>
+                        <P><?= $user['user_email'] ?></P>
                     </div>
-                    <img src="assets/images/service/single-service-1.jpg" class="img-fluid" alt="">
-                    <h6><?= $service['service_short_desc'] ?></h6>
+                    <img src="<?= $path ?>uploads/professionls/<?= $user['user_profile_image'] ?>" class="img-fluid" alt="">
+                    <h6><?= $user['user_location'] ?></h6>
 
                 </div>
                 <section class="service-area service-area-v2 pt-110">
@@ -48,31 +48,33 @@ $service = $exe1->fetch_assoc();
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="section-title text-center mb-60">
-                                    <span class="span">Professionals</span>
-                                    <h2>Our Best Professionals</h2>
+                                    <span class="span">Pakages</span>
+                                    <h2>Best Service Pakages</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <?php $service_id =  $service['service_id'];
-                        $prof_qry =  "SELECT * FROM tbl_users  WHERE user_status='1' AND service_id=$service_id ORDER BY user_order DESC";
-                        $prof_exe = $conn->query($prof_qry) or die(mysqli_error($conn));
-                        while ($prof = $prof_exe->fetch_array()) { ?>
-                            <div class="col-lg-6">
-                                <div class="service-item mb-50">
-                                    <div class="icon">
-                                        <i class="<?= $service['service_icon'] ?>"></i>
+                                    <?php
+                        $us_qry =  "SELECT * FROM tbl_user_services  WHERE `user_id` = $slug AND us_status='1' ORDER BY us_order DESC";
+                        $us_exe = $conn->query($us_qry) or die(mysqli_error($conn));
+                        while ($us = $us_exe->fetch_array()) {
+                            ?>
+                                    <div class="col-lg-6">
+                                        <div class="service-item mb-50">
+                                            <div class="icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="info">
+                                                <h4><?= $us['us_title'] ?></h4>
+                                                <h4>$ <?= $us['us_pkg'] ?></h4>
+                                                <p><?= $us['us_detail'] ?></p>
+                                                <a href="<?= $path ?>pakage/<?= $us['us_slug'] ?>" class="btn_link"><i
+                                                        class="fas fa-eye"></i> View Pakage</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="info">
-                                        <h4><?= $prof['user_name'] ?></h4>
-                                        <p><?= $service['service_short_desc'] ?></p>
-                                        <a href="<?= $path ?>professional/<?= doEncode($prof['user_id']) ?>"
-                                            class="btn_link">Read More</a>
-                                    </div>
+                                    <?php } ?>
                                 </div>
-                            </div>
-                            <?php } ?>
-                        </div>
                     </div>
                 </section>
             </div>

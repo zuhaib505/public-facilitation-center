@@ -35,9 +35,38 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <div class="search-box">
+                    <!-- <div class="search-box">
                         <a href="#" class="search-icon" data-toggle="modal" data-target="#search-modal"><i class="fas fa-search"></i></a>
-                    </div>
+                    </div> -->
+                    <div class="sidebar-widget-area">
+                                <div class="widget widget-search" style="text-align: end;">
+                                    <div id="google_translate_element"></div>
+                                    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                                    </script>
+                                    <script>
+                                        function googleTranslateElementInit() {
+                                            new google.translate.TranslateElement({},
+                                                'google_translate_element'
+                                            );
+                                        }
+                                        $(window).load(function() {
+                                            $(".arrivals-mob").remove();
+                                            $("#track-booking-mob").remove();
+                                            $("#featured-videos-mob").remove();
+                                            $("#product-videos-mob").remove();
+                                            $(".ads-mob").remove();
+                                            $(".goog-logo-link").parent().remove();
+                                            $('.goog-te-gadget').html($('.goog-te-gadget').children());
+                                        })
+                                    </script>
+                                    <!-- <form>
+                                    <div class="form_group">
+                                        <input type="text" class="form_control" placeholder="Search your keyword" name="search">
+                                        <button class="icon"><i class="flaticon-search-interface-symbol"></i></button>
+                                    </div>
+                                </form> -->
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>
@@ -47,7 +76,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="brand-logo">
-                        <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" class="img-fluid" alt=""></a>
+                        <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" class="img-fluid" alt="">
+                        <span class="logo_text">Public Facilitation Center</span>
+                    </a>
                     </div>
                 </div>
                 <div class="col-lg-6 header-box">
@@ -76,7 +107,9 @@
             <div class="nav-container d-flex align-items-center justify-content-between">
                 <!-- site logo -->
                 <div class="brand-logo">
-                    <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" class="img-fluid" alt=""></a>
+                    <a href="<?= $path ?>"><img src="<?= $path ?>uploads/logo/<?= $site_logo ?>" class="img-fluid" alt="Logo">
+                    <span class="logo_text">Public Facilitation Center</span>
+                </a>
                 </div>
                 <div class="nav-menu">
                     <!-- Navbar Close Icon -->

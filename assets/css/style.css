@@ -2555,20 +2555,34 @@ ul.check_list li {
         margin-bottom: 40px; } }
     .contact-area .contact-wrapper .contact-form .form_group .form_control {
       margin-bottom: 30px; }
+      .contact-area .contact-wrapper .book-form .form_group .form_control {
+        margin-bottom: 30px; }
     .contact-area .contact-wrapper .contact-form .form_button .reset-btn {
       background: #252241;
       margin-left: 20px; }
+      .contact-area .contact-wrapper .book-form .form_button .reset-btn {
+        background: #252241;
+        margin-left: 20px; }
       @media (max-width: 767px) {
         .contact-area .contact-wrapper .contact-form .form_button .reset-btn {
-          margin-left: 10px; } }
+          margin-left: 10px; }
+          .contact-area .contact-wrapper .book-form .form_button .reset-btn {
+            margin-left: 10px; } }
           .contact-area .contact-wrapper .contact-form1 .form_group .form_control {
             margin-bottom: 30px; }
+            .contact-area .contact-wrapper .book-form1 .form_group .form_control {
+              margin-bottom: 30px; }
           .contact-area .contact-wrapper .contact-form1 .form_button .reset-btn {
             background: #252241;
             margin-left: 20px; }
+            .contact-area .contact-wrapper .book-form1 .form_button .reset-btn {
+              background: #252241;
+              margin-left: 20px; }
             @media (max-width: 767px) {
               .contact-area .contact-wrapper .contact-form1 .form_button .reset-btn {
-                margin-left: 10px; } }
+                margin-left: 10px; }
+                .contact-area .contact-wrapper .book-form1 .form_button .reset-btn {
+                  margin-left: 10px; } }
   .contact-area .contact-information .box {
     background: #252241;
     padding: 35px 35px 30px;
@@ -2763,3 +2777,9 @@ ul.check_list li {
           color: #43baff; }
 
 /*# sourceMappingURL=style.css.map */
+.logo_text{
+    color: #43baff;
+    font-size: 36px;
+    vertical-align: middle;
+    font-weight: 600;
+}

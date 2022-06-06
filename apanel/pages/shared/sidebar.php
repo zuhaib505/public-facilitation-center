@@ -45,6 +45,12 @@
                         </li>
                     </ul>
                 </li>
+                <li class="sidebar-menu-item <?= ($_REQUEST['page'] == 'requests' ) ? 'active' : ''; ?> ">
+                    <a class="sidebar-menu-button" href="<?= $apath; ?>requests">
+                        <i class="sidebar-menu-icons sidebar-menu-icon--left material-icons">pages</i>
+                        <span class="sidebar-menu-text">Requests</span>
+                    </a>
+                </li>
                 <li class="sidebar-menu-item <?= ($_REQUEST['page'] == 'subscribers') ? 'active' : ''; ?>">
                     <a class="sidebar-menu-button" href="<?= $apath; ?>subscribers">
                         <i class="sidebar-menu-icons sidebar-menu-icon--left material-icons">insert_drive_file</i>

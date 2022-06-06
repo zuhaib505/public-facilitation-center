@@ -14,6 +14,12 @@
                         <span class="sidebar-menu-text">Services</span>
                     </a>
                 </li>
+                <li class="sidebar-menu-item <?= ($_REQUEST['page'] == 'requests') ? 'active' : ''; ?>">
+                    <a class="sidebar-menu-button" href="<?= $path ?>user/requests">
+                        <i class="sidebar-menu-icons sidebar-menu-icon--left material-icons">insert_drive_file</i>
+                        <span class="sidebar-menu-text">Requests</span>
+                    </a>
+                </li>
 
                 <li class="sidebar-menu-item <?= ($_REQUEST['page'] == 'change_profile') ? 'active' : ''; ?>">
                     <a class="sidebar-menu-button" href="<?= $path ?>user/change_profile">

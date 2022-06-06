@@ -7,14 +7,14 @@ if ($_SERVER['HTTP_HOST'] != 'localhost') {
     $username_dbconn = "root";
     $password_dbconn = '';
 
-    $path = "http://localhost:121/public-facilitation-center/";
+    $path = "http://localhost/public-facilitation-center/";
 } else {
     $hostname_dbconn = "localhost";
     $rating_dbname = "public";
     $username_dbconn = "root";
     $password_dbconn = "";
 
-    $path = "http://localhost:121/public-facilitation-center/";
+    $path = "http://localhost/public-facilitation-center/";
 }
 
 define('CURRENCY', '$');

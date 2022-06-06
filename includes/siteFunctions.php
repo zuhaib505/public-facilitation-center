@@ -1181,6 +1181,15 @@ function getServiceByServiceId($id)
     }
     return $output;
 }
+
+function getServiceByServiceSlug($id)
+{
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_services WHERE `service_slug`='$id' AND service_status='1' ")) {
+        $output = fetch_assoc($ex);
+    }
+    return $output;
+}
 function getServicesByUserId($id)
 {
     $output = array();
@@ -1189,15 +1198,16 @@ function getServicesByUserId($id)
     }
     return $output;
 }
-function getProductCategorybySlug($slug)
+
+function getUserPakage($id)
 {
-    global $conn;
-    $sql = "SELECT * FROM tbl_pro_cats WHERE cat_slug='" . $slug . "'";
-    $ex = $conn->query($sql);
-    while ($row = $ex->fetch_array()) {
-        return $row;
+    $output = array();
+    if ($ex = getList("SELECT * FROM tbl_user_services WHERE `us_id`='$id' AND us_status='1' ")) {
+        $output = fetch_assoc($ex);
     }
+    return $output['us_title'];
 }
+
 function getProductCode($code)
 {
     global $conn;

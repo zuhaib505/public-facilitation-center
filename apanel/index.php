@@ -17,7 +17,7 @@ include_once("includes/confg.php");
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
-    <link href="<?= $path ?>assets/images/logo/icon.png" rel="icon">
+    <link href="<?= $path ?>assets/images/favicon.ico" rel="icon">
 
     <!-- Perfect Scrollbar -->
     <link type="text/css" href="<?= $apath; ?>assets/vendor/perfect-scrollbar.css" rel="stylesheet">

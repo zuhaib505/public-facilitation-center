@@ -9,7 +9,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                     <div class="hero-content text-center">
                         <span class="wow fadeInUp" data-wow-delay=".1s">Get Yourself Facilitated With Our Services</span>
                         <h1 class="wow fadeInUp" data-wow-delay=".2s">Keep Yourself Tension Free</h1>
-                        <h3 class="wow fadeInUp" data-wow-delay=".3s">Lorem ipsum dolor amet, consecte Lorem ipsum dolor sit<br>amet consectetur adipisicing eiusmod tempor</h3>
+                        <h3 class="wow fadeInUp" data-wow-delay=".3s">Her are the professionals, you were looking for.<br>In case of any issue please consult with us.</h3>
                         <ul class="wow fadeInUp" data-wow-delay=".4s">
                             <li><a href="<?= $path ?><?= $banner['link1'] ?>" class="main-btn"><?= $banner['text1'] ?></a></li>
                             <li><a href="<?= $path ?><?= $banner['link2'] ?>" class="main-btn"><?= $banner['text2'] ?></a></li>
@@ -31,7 +31,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                         </div>
                         <div class="info">
                             <h4>Professionals</h4>
-                            <p>consectetur adipisicing eiusmod tempor incididunt ut labore.</p>
+                            <p>Here are the professionals you were looking for, Choice is your.</p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                         </div>
                         <div class="info">
                             <h4>Services</h4>
-                            <p>consectetur adipisicing eiusmod tempor incididunt ut labore.</p>
+                            <p>Here are the services you were looking for, Choice is your.</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                         </div>
                         <div class="info">
                             <h4>About Us</h4>
-                            <p>consectetur adipisicing eiusmod tempor incididunt ut labore.</p>
+                            <p>Here are the best Professional web app you were looking for.</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                         </div>
                         <div class="info">
                             <h4>Contact Us</h4>
-                            <p>consectetur adipisicing eiusmod tempor incididunt ut labore.</p>
+                            <p>In case of any issue, Please contact us, So we can help you.</p>
                         </div>
                     </div>
                 </div>
@@ -212,17 +212,25 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                             <div class="col-lg-12">
                                 <div class="testimonial-box">
                                     <i class="flaticon-left-quote"></i>
-                                    <p>“Lorem ipsum dolor consectetur elit Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt’’</p>
-                                    <h5>Sarif Jaya Miprut</h5>
-                                    <span>Profile Manager</span>
+                                    <p>“Our Mission is to serve public of PAKISTAN , We are willing to provide you services, you like’’</p>
+                                    <h5>Zuhaib Hassan</h5>
+                                    <span>Company CEO</span>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="testimonial-box">
                                     <i class="flaticon-left-quote"></i>
-                                    <p>“Lorem ipsum dolor consectetur elit Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt’’</p>
-                                    <h5>Sarif Jaya Miprut</h5>
-                                    <span>Profile Manager</span>
+                                    <p>“Our Mission is to serve public of PAKISTAN , We are willing to provide you services, you like’’</p>
+                                    <h5>Ghayoor Abbas</h5>
+                                    <span>Company Manager</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="testimonial-box">
+                                    <i class="flaticon-left-quote"></i>
+                                    <p>“Our Mission is to serve public of PAKISTAN , We are willing to provide you services, you like’’</p>
+                                    <h5>Shehzeel Ahmed</h5>
+                                    <span>Asistant Manager</span>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +240,7 @@ $banner = unserialize(stripslashes($bannerrs['txt_data'])); ?>
                 <div class="call-back-form">
                     <form action="#" method="post" data-url="<?= $path . 'send-quote' ?>" data-type="contact" class="contact-form contact">
                         <h3>Request A Call Back</h3>
-                        <p>If You Need Any Help YoU Can Contact US...</p>
+                        <p>If You Need Any Help You Can Contact US...</p>
                         <div class="form_group">
                             <label>Your Name</label>
                             <input type="text" placeholder="Enter Name" class="form_control alpha" name="name">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 05:20 AM
+-- Generation Time: Jun 06, 2022 at 05:50 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -193,10 +193,10 @@ CREATE TABLE `tbl_services` (
 --
 
 INSERT INTO `tbl_services` (`service_id`, `service_slug`, `service_title`, `service_icon`, `service_short_desc`, `service_detail`, `service_status`, `service_order`) VALUES
-(1, 'education', 'EDUCATION', 'fas fa-book', 'consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.', NULL, 1, 1),
-(2, 'car-repairing', 'CAR REPAIRING', 'flaticon-car-service', 'consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.', NULL, 1, 2),
-(3, 'bike-repairing', 'BIKE REPAIRING', 'flaticon-mechanic', 'consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.', NULL, 1, 3),
-(4, 'electric-appliances-repairing', 'ELECTRIC APPLIANCES REPAIRING', 'fas fa-tools', 'consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.', '<p><span style=\"font-size: 15px;\">consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.</span><br></p>', 1, 4);
+(1, 'education', 'EDUCATION', 'fas fa-book', 'Get ready to Learn, Learning is the best part of life We have professionals to serve you.', '<p><span style=\"font-size: 15px;\">Get ready to Learn, Learning is the best part of life We have professionals to serve you.</span><br></p>', 1, 1),
+(2, 'car-repairing', 'CAR REPAIRING', 'flaticon-car-service', 'Get ready to repair your Cars, We have professionals to serve you.', '<p><span style=\"font-size: 15px;\">Get ready to repair your Cars, We have professionals to serve you.</span><br></p>', 1, 2),
+(3, 'bike-repairing', 'BIKE REPAIRING', 'flaticon-mechanic', 'Get ready to repair your Bikes, We have professionals to serve you.', '<span style=\"font-size: 15px;\">Get ready to repair your Bikes, We have professionals to serve you.</span>', 1, 3),
+(4, 'electric-appliances-repairing', 'ELECTRIC APPLIANCES REPAIRING', 'fas fa-tools', 'Get ready to repair your appliances, We have professionals to serve you.', '<p><span style=\"font-size: 15px;\">Get ready to repair your electric appliances, We have professionals to serve you.</span><br></p>', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,7 @@ CREATE TABLE `tbl_texts` (
 
 INSERT INTO `tbl_texts` (`txt_id`, `txt_type`, `txt_data`) VALUES
 (1, 'header', 'a:4:{s:5:\"text1\";s:7:\"SERVICE\";s:5:\"link1\";s:7:\"service\";s:5:\"text2\";s:13:\"PROFESSIONALS\";s:5:\"link2\";s:13:\"professionals\";}'),
-(2, 'footer', 'a:1:{s:14:\"text_copyright\";s:47:\"@copy 2022 <span>PFS</span>. All Right Reserved\";}');
+(2, 'footer', 'a:1:{s:14:\"text_copyright\";s:47:\"@copy 2022 <span>PFC</span>. All Right Reserved\";}');
 
 -- --------------------------------------------------------
 
@@ -292,7 +292,7 @@ INSERT INTO `tbl_users` (`user_id`, `user_profile_image`, `user_name`, `user_use
 (1, 'image_16476104374164.png', 'Green Fields', 'testuser', 'green-fields', 'green@gmail.com', '0300 1234567', 'l3u3s446m3a373g4', 'Islamabad', 'Pakistan , Islamabad', 1, 1, 1, '1647265315'),
 (3, 'image_16486474323090.jpg', 'Ali Hassan', NULL, 'ali-hassan', 'ali@gmail.com', '03001234567', 'l3u3s446m3d3v354v4v4p5g4', 'Islamabad', 'Pakistan , Islamabad', 2, 1, 2, NULL),
 (4, 'image_16486472417851.jpg', 'Dummy User', NULL, 'dummy-user', 'dummy@gmail.com', '03001234567', 'l3u3s446m3a373g4', 'Sargodha', 'Pakistan , Sargodha', 3, 1, 3, NULL),
-(5, 'image_16487143881841.jpg', 'Zuhaib Hassan', 'zuhaib', 'zuhaib-hassan', 'zuhaib@gmail.com', '03001234567', 'l3u3s446m3a373g4', 'Islamabad', 'Pakistan , Islamabad', 1, 1, 4, NULL),
+(5, 'image_16487143881841.jpg', 'Zuhaib Hassan', 'zuhaib', 'zuhaib-hassan', 'zuhaib@gmail.com', '03001234567', 'l3u3s446m3a373g4', 'sargodha', 'Pakistan , Sargodha', 4, 1, 4, NULL),
 (6, 'image_16487208232015.jpg', 'Ghayoor Abbas', NULL, 'ghayoor-abbas', 'g@gmail.com', '03001234567', 'l3u3s446m3a373g4', 'Islamabad', 'Pakistan , Islamabad', 1, 1, 5, NULL),
 (7, 'image_16487210629648.jpg', 'Ghayoor Abbas', NULL, 'ghayoor-abbas', 'ghayoor@gmail.com', '03001234567', 'l3u3s446m3a373g4', 'Islamabad', 'Pakistan , Islamabad', 1, 1, 6, NULL),
 (9, 'image_16490026963766.jpg', 'Ali Hassan', NULL, 'ali-hasssan', 'a@a.com', '03001234567', 'l3u3s446m3a373g4', 'Islamabad', 'Pakistan , Islamabad', 1, 1, 7, NULL);
@@ -321,8 +321,14 @@ CREATE TABLE `tbl_user_services` (
 --
 
 INSERT INTO `tbl_user_services` (`us_id`, `us_slug`, `us_title`, `us_pkg`, `user_id`, `us_ext_charges`, `us_detail`, `us_image`, `us_status`, `us_order`) VALUES
-(1, 'science-tution', 'Science Tution', '100', 1, '10', 'consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.', 'image_16473273379019.png', 1, 1),
-(5, 'home-tution', 'Home Tution', '100', 1, '10', 'consectetur adipisicing elit eiusmod tempor tempor elit incididunt ut labore.', 'image_16473274767487.png', 1, 2);
+(1, 'science-tution', 'Science Tution', '100', 1, '10', 'Science Teaching, Extra charges will be applied after every 5km travelling.', 'image_16473273379019.png', 1, 1),
+(5, 'home-tution', 'Home Tution', '100', 1, '10', 'Home Tution, Extra charges will be applied after every 5km travelling.', 'image_16473274767487.png', 1, 2),
+(8, 'engine-repairing', 'Engine Repairing', '100', 0, '10', '<p>Repair Engine, Extra Charges will be applied ofter ever 5km travelling.</p>', 'image_16544858819982.jpg', 1, 3),
+(9, 'engine-repairing', 'Engine Repairing', '100', 0, '10', '<p>Engine Repairing, Extra charges will be applied after every 5km travelling.</p>', 'image_16544859725889.jpg', 1, 4),
+(10, 'electrical-mechanic', 'Electrical Mechanic', '100', 0, '10', '<p>Electrical Appliances Repairing, Extra charges will be applied after every 5km travelling.<br></p>', 'image_16544861832345.jpg', 1, 5),
+(11, 'science-tech', 'Science Tech', '100', 0, '10', '<p>Science Teaching, Extra charges will be applied after every 5km travelling.<br></p>', 'image_16544862617794.jpg', 1, 6),
+(12, 'science-tech', 'Science Tech', '100', 0, '10', '<p>Science Teaching, Extra charges will be applied after every 5km travelling.<br></p>', '', 1, 7),
+(13, 'math-teacher', 'Math Teacher', '100', 0, '10', '<p>Math Teaching, Extra charges will be applied after every 5km travelling.<br></p>', 'image_16544863546279.jpg', 1, 8);
 
 --
 -- Indexes for dumped tables
@@ -474,7 +480,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_user_services`
 --
 ALTER TABLE `tbl_user_services`
-  MODIFY `us_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `us_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

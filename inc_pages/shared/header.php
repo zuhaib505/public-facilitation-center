@@ -7,19 +7,6 @@
     </div>
 </div>
 <!--====== End Header ======-->
-<!--====== Search From ======-->
-<div class="modal fade" id="search-modal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <form>
-                <div class="form_group">
-                    <input type="text" class="form_control" placeholder="Search here...">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!--====== Search From ======-->
 <!--====== Start Header ======-->
 <header class="header-area header-area-v1">
     <div class="header-top">
@@ -50,11 +37,6 @@
                                             );
                                         }
                                         $(window).load(function() {
-                                            $(".arrivals-mob").remove();
-                                            $("#track-booking-mob").remove();
-                                            $("#featured-videos-mob").remove();
-                                            $("#product-videos-mob").remove();
-                                            $(".ads-mob").remove();
                                             $(".goog-logo-link").parent().remove();
                                             $('.goog-te-gadget').html($('.goog-te-gadget').children());
                                         })

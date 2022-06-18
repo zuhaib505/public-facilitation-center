@@ -58,9 +58,24 @@ if ($output['status']) {
     $headers .= "Content-type: text/html;charset=utf-8\r\n";
     $headers .= "From: No-Reply <no-reply@publicfacilitationcenter.com>" . "\r\n";
     $headers .= "Reply-To: No-Reply <no-reply@publicfacilitationcenter.com>" . "\r\n";
+
     if ($site_driver == "mail") {
-        @mail($emailto, $subject, $template, $headers);
-        $output['message'] = "Thank you for subscribing";
+        $oldsub = "SELECT * FROM tbl_subscribers WHERE sub_email='$email'";
+        $exeoldsub = $conn->query($oldsub) or die('mysql_error');
+        if ($fetcholdsub = $exeoldsub->fetch_assoc()) {
+            $output['message'] = "You Have Already Subscribed.";
+        } else {
+            $s1_max_orderid = "select max(`sub_order`) as orderid from tbl_subscribers where 1 ";
+            $q1_max_orderid = $conn->query($s1_max_orderid) or die($s1_max_orderid);
+            $r1_max_orderid = $q1_max_orderid->fetch_array();
+            $order = intval($r1_max_orderid["orderid"]) + 1;
+            $newsub = "INSERT INTO `tbl_subscribers`(`sub_email`, `sub_status`, `sub_order`) VALUES ('$email','1','$order')";
+            $exenewsub = $conn->query($newsub) or die('mysql_error');
+            // $fetchnewsub = $exenewsub->fetch_assoc();
+            @mail($emailto, $subject, $template, $headers);
+            $output['message'] = "Thank you for subscribing";
+        }
+
     } else {
 
         //Load composer's autoloader

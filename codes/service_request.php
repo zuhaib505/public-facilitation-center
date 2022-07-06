@@ -23,8 +23,8 @@
         saveRecord("tbl_requests", $vals);
         $_SESSION['successMsg'] = "Your Request Has Been Sent Successfully!";
         unset($_POST);
-        redirectTo('pakage/'.$redir);
     }
+    redirectTo('pakage/'.$redir);
     
 
 ?>

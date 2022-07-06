@@ -52,6 +52,9 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
+                                        <div class="g-recaptcha mb-10 ml-14" data-sitekey="6Lf_nWwUAAAAAOWsOO1Uc71lQo8aWGt1p93MlWym"></div>
+                                    </div>
+                                    <div class="col-lg-12">
                                         <div class="form_button">
                                             <button class="main-btn">Submit</button>
                                         </div>
@@ -124,3 +127,4 @@
             </div>
         </section>
         <!--====== End contact-map-section Section ======-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
